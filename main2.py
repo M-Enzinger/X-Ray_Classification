@@ -10,7 +10,7 @@ result-normal=st.button("Click here to see the x-ray image of a normal chest")
 if result-normal:
   st.image('Normal-chest.jpeg', caption="this is what a normal chest looks like", width=None, channels="RGB", output_format="auto")
   
-  result-pneumonia=st.button("Click here to see the x-ray image of a chest with pneumonia")
+result-pneumonia=st.button("Click here to see the x-ray image of a chest with pneumonia")
 if result-pneumonia:
   st.image('chest-pneumoia.jpeg', caption="this is what a chest with pneumonia looks like", width=None, channels="RGB", output_format="auto")
  
