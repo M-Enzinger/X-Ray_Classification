@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 st.title('X-Ray Classification Team - A Brief Introduction')
-st.write("Hello, we are Maxi and Ilayda.")
+st.write("Hello, we are Maxi and Ilayda. Our subject is **Chest X-Ray Classification**")
 st.balloons()
 
 resultnormal=st.button("Click here to see the x-ray image of a normal chest")
