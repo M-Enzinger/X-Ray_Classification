@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-st.title('X-Ray Classification Team - A Brief Introduction')
+st.title('Team Chest X-Ray Classification')
 st.write("Hello, we are Maxi and Ilayda. Our subject is **Chest X-Ray Classification**")
 
 
