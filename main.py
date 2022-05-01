@@ -70,7 +70,7 @@ with col3:
 first_part()
 if button1:
     second_part()
-else:
+
     
              
 
