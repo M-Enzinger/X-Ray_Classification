@@ -54,11 +54,11 @@ if button1:
     response = requests.get(URL)
     data = response.json()
     main = data['main']
-    temp = main['temp']
+    tempr = main['temp']
    
     
     col1, col2, col3 = st.columns(3)
-    col1.metric("Temperature", temp, "1.2 °F")
+    col1.metric("Temperature", tempr, "1.2 °F")
     col2.metric("Wind", "9 mph", "-8%")
     col3.metric("Humidity", "86%", "4%")
 
