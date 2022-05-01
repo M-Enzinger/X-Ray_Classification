@@ -61,7 +61,7 @@ if button1:
     
     col1, col2, col3 = st.columns(3)
     col1.metric("Temperature", str(tempr) + " °C", "1.2 °F")
-    col2.metric("Wind", str(wind) + " km/h", "-8%")
+    col2.metric("Wind", str(wind) + " m/s", "-8%")
     col3.metric("Humidity", str(hum) + " %", "4%")
 
 else:
