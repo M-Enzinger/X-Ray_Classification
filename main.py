@@ -17,7 +17,12 @@ with col3:
 
 #Second part - solution and motivation - firstly unvisible
 if button1:
-    #Solution what user has missed
+    second_part()
+else:
+    st.image(image="chest-pneumoia.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+             
+def second_part():
+     #Solution what user has missed
     st.image(image="chest-pneumoia_prepared.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.write("Probably you have not detected it, but this person has a dangerous pneumonia, highlighted on the appeared picture above.")
     st.write("You can compare both, a healthy lung and one with pneumonia by clicking these radio buttons:")
@@ -47,7 +52,7 @@ if button1:
     
     
     #Weather forecast
-    st.write("To make sure that you are dressed approriate to avoid a pneumonia, you can check today`s Weather in nuremberg below:")
+    st.write("To make sure that you are dressed approriate to avoid a pneumonia, you can check today`s Weather in Nuremberg below:")
     api_key = "41c76f28ad89e9493b1aa62dac513ba2"
     lat = "49.452103"
     lon = "11.076665"
@@ -63,12 +68,6 @@ if button1:
     col1.metric("Temperature", str(tempr) + " °C")
     col2.metric("Wind", str(wind) + " m/s")
     col3.metric("Humidity", str(hum) + " %")
-
-else:
-    st.image(image="chest-pneumoia.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-             
-
-
 
 
 #ideen: wetter standort dropdown menü; 
