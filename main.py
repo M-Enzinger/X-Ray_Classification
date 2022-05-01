@@ -59,7 +59,6 @@ if button1:
     hum = data["current"]["wind_speed"]
     wind = data["current"]["humidity"]
     
-    st.write(current)
     col1, col2, col3 = st.columns(3)
     col1.metric("Temperature", current, "1.2 °F")
     col2.metric("Wind", wind, "-8%")
