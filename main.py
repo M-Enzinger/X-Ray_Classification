@@ -63,11 +63,12 @@ def second_part():
 
      
 #main - switching between parts
+first_part()
+
 col1, col2, col3 , col4, col5 = st.columns(5)
 with col3:
-    button1 = st.button("What have I missed?")
-    
-first_part()
+    button1 = st.button("What have I missed?")   
+
 if button1:
     second_part()
 
