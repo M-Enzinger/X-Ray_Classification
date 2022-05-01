@@ -67,7 +67,7 @@ col1, col2, col3 , col4, col5 = st.columns(5)
 with col3:
     button1 = st.button("What have I missed?")
     
-     first_prt()
+     first_part()
 if button1:
     second_part()
 else:
