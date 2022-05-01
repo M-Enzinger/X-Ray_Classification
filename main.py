@@ -58,7 +58,7 @@ if button1:
      np.random.randn(20, 3),
      columns=['a', 'b', 'c'])
 
-st.line_chart(chart_data)
+    st.line_chart(chart_data)
 
 else:
     st.image(image="chest-pneumoia.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
