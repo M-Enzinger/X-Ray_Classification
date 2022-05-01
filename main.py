@@ -60,7 +60,7 @@ if button1:
     wind = data["current"]["humidity"]
     
     col1, col2, col3 = st.columns(3)
-    col1.metric("Temperature", current, "1.2 °F")
+    col1.metric("Temperature", tempr, "1.2 °F")
     col2.metric("Wind", wind, "-8%")
     col3.metric("Humidity", hum, "4%")
 
