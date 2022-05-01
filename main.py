@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import requests, json
+import pyowm
 
 #First part - introduction and question - visible
 st.title('X-Ray Classification Team - A Brief Introduction')
@@ -48,7 +48,7 @@ if button1:
     #Weather forecast
     st.write("To make sure that you are dressed approriate to avoid a pneumonia, you can check today`s Weather in nuremberg below:")
     APIKEY='41c76f28ad89e9493b1aa62dac513ba2'                  #your API Key here as string
-    OpenWMap=pyowm.OWM(APIKEY)                   # Use API key to get data
+    OpenWMap = pyowm.OWM(APIKEY)                   # Use API key to get data
     Weather=OpenWMap.weather_at_place(‘London’)  # give where you need to see the weather
     Data=Weather.get_weather()                   # get out data in the mentioned location
     temp = Data.get_temperature(unit='celsius')
