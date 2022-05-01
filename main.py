@@ -4,12 +4,7 @@ import numpy as np
 import requests
 import json
 
-def healthy_lung():
-     st.image(image="Normal-chest.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-     
-def pneumonia_lung():
-      st.image(image="chest-pneumoia.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-          
+
 def first_part():
      #First part - introduction and question - visible
      st.title('X-Ray Classification Team - A Brief Introduction')
@@ -33,10 +28,10 @@ def second_part():
         ('a healthy lung', 'a lung with pneumonia'))
 
     if radio_button1 == 'a healthy lung':
-        healthy_lung()
+          st.image(image="Normal-chest.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
      
     else:
-        pneumonia_lung()
+          st.image(image="chest-pneumoia.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
       
         
      
