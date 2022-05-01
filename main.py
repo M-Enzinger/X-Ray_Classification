@@ -35,7 +35,7 @@ if button1:
 
     if radio_button1 == 'a healthy lung':
         st.image(image="Normal-chest.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-    if radio_button1 == 'a lung with pneumonia':
+    else:
         st.image(image="chest-pneumoia.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
 else:
