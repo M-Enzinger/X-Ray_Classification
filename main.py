@@ -7,7 +7,7 @@ st.write("Hello, we are Ilayda and Maximilian, the X-Ray Classifiaction team. Su
 st.write("In the picture below you can see the X-RAY of a chest. You recognize something unusual? Neither we.")
 st.write("Inspect the picture carefully, then click the Button below.")
 
-button1 = st.button("What do I have missed?", key=None, "Click me", on_click=None, args=None, kwargs=None, *, disabled=False)
+button1 = st.button("What do I have missed?")
 if button1:
   st.image(image="Normal-chest.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
