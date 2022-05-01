@@ -29,9 +29,21 @@ if button1:
     st.write("You can compare both, a healthy lung and one with pneumonia by clicking these radio buttons:")
     
     
-    radio_button1 = st.radio(
-     "I want to see the X-RAY of...",
-     ('a healthy lung', 'a lung with pneumonia'))
+    col1, col2, col3 , col4, col5 = st.columns(5)
+
+    with col1:
+       pass
+    with col2:
+     pass
+    with col3:
+        radio_button1 = st.radio(
+        "I want to see the X-RAY of...",
+        ('a healthy lung', 'a lung with pneumonia'))
+    with col4:
+       pass
+    with col5:
+       pass
+
 
     if radio_button1 == 'a healthy lung':
         st.image(image="Normal-chest.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
