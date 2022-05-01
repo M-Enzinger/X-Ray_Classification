@@ -48,7 +48,7 @@ if button1:
     #Weather forecast
     st.write("To make sure that you are dressed approriate to avoid a pneumonia, you can check today`s Weather in nuremberg below:")
     BASE_URL = "https://api.openweathermap.org/data/2.5/weather?"
-    CITY = "london"
+    CITY = "London"
     API_KEY = "41c76f28ad89e9493b1aa62dac513ba2"
     URL = BASE_URL + "q=" + CITY + "&appid=" + API_KEY
     response = requests.get(URL)
