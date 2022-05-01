@@ -34,7 +34,7 @@ if button1:
     with col1:
        pass
     with col2:
-     pass
+     st.write("I want to see the X-RAY of...")
     with col3:
         radio_button1 = st.radio(
         "",
