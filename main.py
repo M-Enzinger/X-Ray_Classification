@@ -49,8 +49,8 @@ if button1:
     #Weather forecast
     st.write("To make sure that you are dressed approriate to avoid a pneumonia, you can check today`s Weather in nuremberg below:")
     api_key = "41c76f28ad89e9493b1aa62dac513ba2"
-    lat = "48.208176"
-    lon = "16.373819"
+    lat = "49.452103"
+    lon = "11.076665"
     url = "https://api.openweathermap.org/data/2.5/onecall?lat=%s&lon=%s&appid=%s&units=metric" % (lat, lon, api_key)
     response = requests.get(url)
     data = json.loads(response.text)
@@ -60,9 +60,9 @@ if button1:
     hum = data["current"]["humidity"]
     
     col1, col2, col3 = st.columns(3)
-    col1.metric("Temperature", str(tempr) + "°C", "1.2 °F")
-    col2.metric("Wind", str(wind) + "km/h", "-8%")
-    col3.metric("Humidity", str(hum) + "%", "4%")
+    col1.metric("Temperature", str(tempr) + " °C", "1.2 °F")
+    col2.metric("Wind", str(wind) + " km/h", "-8%")
+    col3.metric("Humidity", str(hum) + " %", "4%")
 
 else:
     st.image(image="chest-pneumoia.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
