@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import pyowm
+import requests
+import json
 
 #First part - introduction and question - visible
 st.title('X-Ray Classification Team - A Brief Introduction')
