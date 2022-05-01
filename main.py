@@ -25,7 +25,9 @@ with col5:
 #Second part - solution and motivation - firstly unvisible
 if button1:
     st.image(image="chest-pneumoia_prepared.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-    st.write("Probably you have not detected it, but this person has a dangerous pneumonia, highlighted on the appeared picture above. You can compare both, a healthy lung and one with pneumonia by clicking these radio buttons:")
+    st.write("Probably you have not detected it, but this person has a dangerous pneumonia, highlighted on the appeared picture above.")
+    st.write("You can compare both, a healthy lung and one with pneumonia by clicking these radio buttons:")
+    
     
     radio_button1 = st.radio(
      "I want to see the X-RAY of...",
