@@ -56,8 +56,8 @@ if button1:
     data = json.loads(response.text)
     
     tempr = data["current"]["temp"]
-    hum = data["current"]["wind_speed"]
-    wind = data["current"]["humidity"]
+    wind = data["current"]["wind_speed"]
+    hum = data["current"]["humidity"]
     
     col1, col2, col3 = st.columns(3)
     col1.metric("Temperature", tempr, "1.2 °F")
