@@ -16,18 +16,14 @@ with col1:
 with col2:
     pass
 with col3:
-    center_button = st.button('Button')
+    button1 = st.button("What do I have missed?")
 with col4:
     pass
 with col5:
     pass
 
-
-
-
-button1 = st.button("What do I have missed?")
 if button1:
-  st.image(image="Normal-chest.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+  st.image(image="chest-pneumoia_prepared.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
   
 
