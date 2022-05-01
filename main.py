@@ -47,18 +47,15 @@ if button1:
     
     #Weather forecast
     st.write("To make sure that you are dressed approriate to avoid a pneumonia, you can check today`s Weather in nuremberg below:")
-    BASE_URL = "https://api.openweathermap.org/data/2.5/weather?"
-    CITY = "London"
-    API_KEY = "41c76f28ad89e9493b1aa62dac513ba2"
-    URL = BASE_URL + "q=" + CITY + "&appid=" + API_KEY
-    response = requests.get(URL)
-    data = response.json()
-    main = data['main']
-    tempr = main['temp']
-   
+    APIKEY='41c76f28ad89e9493b1aa62dac513ba2'                  #your API Key here as string
+    OpenWMap=pyowm.OWM(APIKEY)                   # Use API key to get data
+    Weather=OpenWMap.weather_at_place(‘London’)  # give where you need to see the weather
+    Data=Weather.get_weather()                   # get out data in the mentioned location
+    temp = Data.get_temperature(unit='celsius')
+    
     
     col1, col2, col3 = st.columns(3)
-    col1.metric("Temperature", tempr, "1.2 °F")
+    col1.metric("Temperature", temp['temp'], "1.2 °F")
     col2.metric("Wind", "9 mph", "-8%")
     col3.metric("Humidity", "86%", "4%")
 
