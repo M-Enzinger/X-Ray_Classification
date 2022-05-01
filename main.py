@@ -51,6 +51,7 @@ if button1:
     CITY = "london"
     API_KEY = "41c76f28ad89e9493b1aa62dac513ba2"
     URL = BASE_URL + "q=" + CITY + "&appid=" + API_KEY
+    response = requests.get(URL)
     data = response.json()
     main = data['main']
     temp = main['temp']
