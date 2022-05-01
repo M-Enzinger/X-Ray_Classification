@@ -37,7 +37,7 @@ if button1:
      st.write("I want to see the X-RAY of...")
     with col3:
         radio_button1 = st.radio(
-        "",
+        ,
         ('a healthy lung', 'a lung with pneumonia'))
     with col4:
        pass
