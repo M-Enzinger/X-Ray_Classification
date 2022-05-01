@@ -56,7 +56,7 @@ if button1:
     data = json.loads(response.text)
     
     current = data["current"]["dt"]
-    
+    st.write(current)
     col1, col2, col3 = st.columns(3)
     col1.metric("Temperature", current, "1.2 °F")
     col2.metric("Wind", "9 mph", "-8%")
