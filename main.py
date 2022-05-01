@@ -57,10 +57,10 @@ def second_part():
     if loc == 'Erlangen':
           lat = "49.599941"
           lon = "11.006300"
-    else if loc == 'Nuremberg':
+    elif loc == 'Nuremberg':
           lat = "49.452103"
           lon = "11.076665"
-    else if loc == 'Forchheim':
+    elif loc == 'Forchheim':
           lat = "49.719910"
           lon = "11.058220"
      
