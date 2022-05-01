@@ -54,7 +54,7 @@ if button1:
     st.line_chart(chart_data)
     
     #Weather forecast
-    st.write("To make sure that you are dressed approriate to avoid a pneumonia, you can check today`s Weather in nuremberg below:"
+    st.write("To make sure that you are dressed approriate to avoid a pneumonia, you can check today`s Weather in nuremberg below:")
     
 
 else:
