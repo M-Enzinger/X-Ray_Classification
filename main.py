@@ -55,12 +55,15 @@ if button1:
     response = requests.get(url)
     data = json.loads(response.text)
     
-    current = data["current"]["temp"]
+    tempr = data["current"]["temp"]
+    hum = data["current"]["wind_speed"]
+    wind = data["current"]["humidity"]
+    
     st.write(current)
     col1, col2, col3 = st.columns(3)
     col1.metric("Temperature", current, "1.2 °F")
-    col2.metric("Wind", "9 mph", "-8%")
-    col3.metric("Humidity", "86%", "4%")
+    col2.metric("Wind", wind, "-8%")
+    col3.metric("Humidity", hum, "4%")
 
 else:
     st.image(image="chest-pneumoia.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
