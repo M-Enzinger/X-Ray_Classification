@@ -11,16 +11,8 @@ st.write("Inspect the picture carefully, then click the Button.")
 
 col1, col2, col3 , col4, col5 = st.columns(5)
 
-with col1:
-    pass
-with col2:
-    pass
 with col3:
     button1 = st.button("What have I missed?")
-with col4:
-    pass
-with col5:
-    pass
 
 #Second part - solution and motivation - firstly unvisible
 if button1:
@@ -51,19 +43,30 @@ if button1:
         st.image(image="chest-pneumoia.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
         
     #Motivation
-    st.write("As demonstrated, it is not possible to identify a pneumonia as a non medical. Even physicians sometimes fail in recognising dangerrous lung deseases.")
-    st.write("Therefore we want to create a machine learned based model as a posible solution. This model will capable of identifying pneumonia on the bases of X-RAYs.")
+    st.write("As demonstrated, it is not possible to identify a pneumonia as a non medical. Even physicians sometimes fail in recognising dangerous lung deseases.")
+    st.write("Therefore we want to create a machine learned based model as a possible solution. This model will be capable of identifying pneumonia on the bases of X-RAYs.")
+    st.write("To state how important the recognition of lung deseases is, we built a chart of all deaths caused by pneumonia per 100th citizens per year in specific EU countries:")
     
     chart_data = pd.DataFrame(
      np.random.randn(20, 3),
      columns=['a', 'b', 'c'])
 
     st.line_chart(chart_data)
+    
+    #Weather forecast
+    st.write("To make sure that you are dressed approriate to avoid a pneumonia, you can check today`s Weather in nuremberg below:"
+    
 
 else:
     st.image(image="chest-pneumoia.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+             
+    col1, col2, col3 = st.columns(3)
+    col1.metric("Temperature", "70 °F", "1.2 °F")
+    col2.metric("Wind", "9 mph", "-8%")
+    col3.metric("Humidity", "86%", "4%")
 
 
 
-
+#ideen: wetter standort dropdown menü; 
 #st.balloons()
+             
