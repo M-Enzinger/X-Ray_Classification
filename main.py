@@ -8,6 +8,19 @@ st.write("In the picture below you can see the X-RAY of a chest. You recognize s
 st.write("Inspect the picture carefully, then click the Button below.")
 st.image(image="chest-pneumoia.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
+
+col1, col2, col3 = st.beta_columns(3)
+
+with col1:
+    pass
+with col2:
+    pass
+with col3:
+    center_button = st.button('Button')
+
+
+
+
 button1 = st.button("What do I have missed?")
 if button1:
   st.image(image="Normal-chest.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
