@@ -9,7 +9,7 @@ st.write("Inspect the picture carefully, then click the Button below.")
 st.image(image="chest-pneumoia.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
 
-col1, col2, col3 , col4, col5 = st.beta_columns(5)
+col1, col2, col3 , col4, col5 = st.columns(5)
 
 with col1:
     pass
