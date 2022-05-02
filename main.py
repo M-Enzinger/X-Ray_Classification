@@ -16,7 +16,10 @@ def first_part():
      col1, col2, col3 , col4, col5 = st.columns(5)
      with col3:
           button1 = st.button("What have I missed?")   
-          
+        
+     if button1:
+     second_part()
+
      #Weather forecast
      st.write("To make sure that you are dressed approriate to avoid a pneumonia, you can check today`s Weather by choosing your city below:")
 
@@ -90,8 +93,7 @@ def second_part():
 #main - switching between parts
 first_part()
 
-if button1:
-    second_part()
+
 
     
              
