@@ -73,7 +73,7 @@ def second_part():
     #Motivation
     st.write("As demonstrated, it is not possible to identify a pneumonia as a non medical. Even physicians sometimes fail in recognising dangerous lung deseases.")
     st.write("Therefore we want to create a machine learned based model as a possible solution. This model will be capable of identifying pneumonia on the bases of X-RAYs.")
-    st.write("To state how important the recognition of lung deseases is, we provide a chart of all deaths caused by pneumonia per 100th citizens per year in specific EU countries:")
+    st.write("To state how important the recognition of lung deseases is, we provide a chart of all deaths caused by pneumonia in Germany per year:")
     
     #Chart
     st.image("pneumonia_chart.PNG", caption="Deaths caused by Pneumonia in Germany between 1998 and 2019; Source: Federal Statistical Office of Germany", width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
