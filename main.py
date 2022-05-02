@@ -62,21 +62,7 @@ def second_part():
     #Solution what user has missed
     st.image(image="chest-pneumoia_prepared.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.write("Probably you have not detected it, but this person has a dangerous pneumonia, highlighted on the appeared picture above.")
-    st.write("You can compare both, a healthy lung and one with pneumonia by clicking these radio buttons:")
-    
-
-    #Raadio Button to switch between a healthy lung abnd one with pneumonia
-    col1, col2, col3 , col4, col5 = st.columns(5)
-    with col3:
-        radio_button1 = st.radio("I want to see the X-RAY of...",
-        ('a healthy lung', 'a lung with pneumonia'))
-
-    if radio_button1 == 'a healthy lung':
-          st.image(image="Normal-chest.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-     
-    else:
-          st.image(image="chest-pneumoia.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-      
+    st.write("You can compare both, a healthy lung and one with pneumonia by clicking these radio buttons:") 
         
      
     #Motivation
