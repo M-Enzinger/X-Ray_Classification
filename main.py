@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import requests
 import json
-pip freeze > requirements.txt
+
 
 def first_part():
      #First part - introduction and question - visible
