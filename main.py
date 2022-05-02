@@ -31,12 +31,15 @@ def first_part():
      if loc == 'Erlangen':
           lat = "49.599941"
           lon = "11.006300"
+          button1 = true
      elif loc == 'Nuremberg':
           lat = "49.452103"
           lon = "11.076665"
+          button1 = true
      elif loc == 'Forchheim':
           lat = "49.719910"
           lon = "11.058220"
+          button1 = true
      
      #Get Data from API
      api_key = "41c76f28ad89e9493b1aa62dac513ba2"
