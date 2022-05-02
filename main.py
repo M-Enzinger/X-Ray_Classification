@@ -35,22 +35,22 @@ def first_part():
           lat = "49.719910"
           lon = "11.058220"
      
-    #Get Data from API
-    api_key = "41c76f28ad89e9493b1aa62dac513ba2"
-    url = "https://api.openweathermap.org/data/2.5/onecall?lat=%s&lon=%s&appid=%s&units=metric" % (lat, lon, api_key)
-    response = requests.get(url)
-    data = json.loads(response.text)
+     #Get Data from API
+     api_key = "41c76f28ad89e9493b1aa62dac513ba2"
+     url = "https://api.openweathermap.org/data/2.5/onecall?lat=%s&lon=%s&appid=%s&units=metric" % (lat, lon, api_key)
+     response = requests.get(url)
+     data = json.loads(response.text)
     
-    #Extract Data
-    tempr = data["current"]["temp"]
-    wind = data["current"]["wind_speed"]
-    hum = data["current"]["humidity"]
+     #Extract Data
+     tempr = data["current"]["temp"]
+     wind = data["current"]["wind_speed"]
+     hum = data["current"]["humidity"]
     
-    #Use the Data in Graphics
-    col1, col2, col3 = st.columns(3)
-    col1.metric("Temperature", str(tempr) + " °C")
-    col2.metric("Wind", str(wind) + " m/s")
-    col3.metric("Humidity", str(hum) + " %")
+     #Use the Data in Graphics
+     col1, col2, col3 = st.columns(3)
+     col1.metric("Temperature", str(tempr) + " °C")
+     col2.metric("Wind", str(wind) + " m/s")
+     col3.metric("Humidity", str(hum) + " %")
           
      
      
