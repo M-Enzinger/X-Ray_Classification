@@ -5,8 +5,8 @@ import json
 
 def first_part():
      #First part - introduction and question - visible
-     st.title('X-Ray Classification Team - A Brief Introduction')
-     st.write("Hello, we are Ilayda, Jan and Maximilian, the Chest X-Ray Classifiaction team. Subsequently we will introduce our project and motivation.")
+     st.title('Chest X-Ray Classification Team - A Brief Introduction')
+     st.write("Hello, we are Ilayda, Jan and Maximilian, the Chest X-Ray Classifiaction Team. Subsequently we will introduce our project and motivation.")
      st.write("In the picture below you can see the X-Ray of a chest. Do you recognize something unusual? --> Neither do we.")
      st.write("Inspect the picture carefully, then click the Button.")
      st.image(image="chest-pneumoia.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")   
