@@ -11,7 +11,48 @@ def first_part():
      st.write("Hello, we are Ilayda and Maximilian, the X-Ray Classifiaction team. Subsequently we will introduce our project and motivation.")
      st.write("In the picture below you can see the X-RAY of a chest. You recognize something unusual? Neither we.")
      st.write("Inspect the picture carefully, then click the Button.")
-     st.image(image="chest-pneumoia.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+     st.image(image="chest-pneumoia.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")   
+     
+     col1, col2, col3 , col4, col5 = st.columns(5)
+     with col3:
+          button1 = st.button("What have I missed?")   
+          
+     #Weather forecast
+     st.write("To make sure that you are dressed approriate to avoid a pneumonia, you can check today`s Weather by choosing your city below:")
+
+     #User chooses location
+     loc = st.selectbox(
+          'What is your home town?',
+          ('Erlangen', 'Nuremberg', 'Forchheim'))
+
+     if loc == 'Erlangen':
+          lat = "49.599941"
+          lon = "11.006300"
+     elif loc == 'Nuremberg':
+          lat = "49.452103"
+          lon = "11.076665"
+     elif loc == 'Forchheim':
+          lat = "49.719910"
+          lon = "11.058220"
+     
+    #Get Data from API
+    api_key = "41c76f28ad89e9493b1aa62dac513ba2"
+    url = "https://api.openweathermap.org/data/2.5/onecall?lat=%s&lon=%s&appid=%s&units=metric" % (lat, lon, api_key)
+    response = requests.get(url)
+    data = json.loads(response.text)
+    
+    #Extract Data
+    tempr = data["current"]["temp"]
+    wind = data["current"]["wind_speed"]
+    hum = data["current"]["humidity"]
+    
+    #Use the Data in Graphics
+    col1, col2, col3 = st.columns(3)
+    col1.metric("Temperature", str(tempr) + " °C")
+    col2.metric("Wind", str(wind) + " m/s")
+    col3.metric("Humidity", str(hum) + " %")
+          
+     
      
 def second_part():  
     #Second part - solution and motivation - firstly unvisible
@@ -45,49 +86,9 @@ def second_part():
      columns=['a', 'b', 'c'])
     st.line_chart(chart_data)
     
-    
-    #Weather forecast
-    st.write("To make sure that you are dressed approriate to avoid a pneumonia, you can check today`s Weather by choosing your city below:")
-
-    #User chooses location
-    loc = st.selectbox(
-     'What is your home town?',
-     ('Erlangen', 'Nuremberg', 'Forchheim'))
-
-    if loc == 'Erlangen':
-          lat = "49.599941"
-          lon = "11.006300"
-    elif loc == 'Nuremberg':
-          lat = "49.452103"
-          lon = "11.076665"
-    elif loc == 'Forchheim':
-          lat = "49.719910"
-          lon = "11.058220"
-     
-    #Get Data from API
-    api_key = "41c76f28ad89e9493b1aa62dac513ba2"
-    url = "https://api.openweathermap.org/data/2.5/onecall?lat=%s&lon=%s&appid=%s&units=metric" % (lat, lon, api_key)
-    response = requests.get(url)
-    data = json.loads(response.text)
-    
-    #Extract Data
-    tempr = data["current"]["temp"]
-    wind = data["current"]["wind_speed"]
-    hum = data["current"]["humidity"]
-    
-    #Use the Data in Graphics
-    col1, col2, col3 = st.columns(3)
-    col1.metric("Temperature", str(tempr) + " °C")
-    col2.metric("Wind", str(wind) + " m/s")
-    col3.metric("Humidity", str(hum) + " %")
-
      
 #main - switching between parts
 first_part()
-
-col1, col2, col3 , col4, col5 = st.columns(5)
-with col3:
-    button1 = st.button("What have I missed?")   
 
 if button1:
     second_part()
