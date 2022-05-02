@@ -61,6 +61,7 @@ def first_part():
      col1.metric("Temperature", str(tempr) + " °C")
      col2.metric("Wind", str(wind) + " m/s")
      col3.metric("Humidity", str(hum) + " %")
+     st.write("Source: api.openweathermap.org")
           
      
 def second_part():  
