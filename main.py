@@ -73,10 +73,7 @@ def second_part():
     st.write("Therefore we want to create a machine learned based model as a possible solution. This model will be capable of identifying pneumonia on the bases of X-RAYs.")
     st.write("To state how important the recognition of lung deseases is, we built a chart of all deaths caused by pneumonia per 100th citizens per year in specific EU countries:")
     
-    chart_data = pd.DataFrame(
-     np.random.randn(20, 3),
-     columns=['a', 'b', 'c'])
-    st.line_chart(chart_data)
+    st.image("pneumonia_chart.PNG", caption="Pneumonia deaths in Germany between 1998 and 2019", width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     
      
 #main - switching between parts
