@@ -18,7 +18,7 @@ def first_part():
           button1 = st.button("What have I missed?")   
         
      if button1:
-     second_part()
+          second_part()
 
      #Weather forecast
      st.write("To make sure that you are dressed approriate to avoid a pneumonia, you can check today`s Weather by choosing your city below:")
