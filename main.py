@@ -69,7 +69,6 @@ def second_part():
     #Solution what user has missed
     st.image(image="chest-pneumoia_prepared.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.write("Probably you have not detected it, but this person has a dangerous pneumonia, highlighted on the appeared picture above.")
-    st.write("You can compare both, a healthy lung and one with pneumonia by clicking these radio buttons:") 
         
     #Motivation
     st.write("As demonstrated, it is not possible to identify a pneumonia as a non medical. Even physicians sometimes fail in recognising dangerous lung deseases.")
