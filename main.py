@@ -77,7 +77,7 @@ def second_part():
     st.write("To state how important the recognition of lung deseases is, we provide a chart of all deaths caused by pneumonia per 100th citizens per year in specific EU countries:")
     
     #Chart
-    st.image("pneumonia_chart.PNG", caption="Pneumonia deaths in Germany between 1998 and 2019", width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    st.image("pneumonia_chart.PNG", caption="Deaths caused by Pneumonia in Germany between 1998 and 2019; Source: Federal Statistical Office of Germany", width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     
      
 #main - switching between parts
