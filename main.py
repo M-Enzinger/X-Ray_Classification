@@ -6,8 +6,8 @@ import json
 def first_part():
      #First part - introduction and question - visible
      st.title('X-Ray Classification Team - A Brief Introduction')
-     st.write("Hello, we are Ilayda, Jan and Maximilian, the X-Ray Classifiaction team. Subsequently we will introduce our project and motivation.")
-     st.write("In the picture below you can see the X-RAY of a chest. You recognize something unusual? Neither we.")
+     st.write("Hello, we are Ilayda, Jan and Maximilian, the Chest X-Ray Classifiaction team. Subsequently we will introduce our project and motivation.")
+     st.write("In the picture below you can see the X-Ray of a chest. Do you recognize something unusual? --> Neither do we.")
      st.write("Inspect the picture carefully, then click the Button.")
      st.image(image="chest-pneumoia.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")   
      
@@ -23,11 +23,11 @@ def first_part():
           
      #Weather:
      #Weather forecast text
-     st.write("To make sure that you are dressed approriate to avoid a pneumonia, you can check today`s Weather by choosing your city below:")
+     st.write("To make sure that you are dressed approriate to prevent pneumonia, you can check today`s weather by choosing your city below:")
 
      #User chooses location
      loc = st.selectbox(
-          'What is your home town?',
+          'What is your hometown?',
           ('Erlangen', 'Nuremberg', 'Forchheim'))
 
      if loc == 'Erlangen':
@@ -69,12 +69,12 @@ def second_part():
     st.write("Probably you have not detected it, but this person has a dangerous pneumonia, highlighted on the appeared picture above.")
         
     #Motivation
-    st.write("As demonstrated, it is not possible to identify a pneumonia as a non medical. Even physicians sometimes fail in recognising dangerous lung deseases.")
-    st.write("Therefore we want to create a machine learned based model as a possible solution. This model will be capable of identifying pneumonia on the bases of X-RAYs.")
-    st.write("To state how important the recognition of lung deseases is, we provide a chart of all deaths caused by pneumonia in Germany per year:")
+    st.write("As demonstrated, it is not possible to identify pneumonia as a non medical. Even physicians sometimes fail in recognising dangerous lung deseases.")
+    st.write("Therefore we want to create a machine learning based model as a possible solution. This model will be capable of identifying pneumonia based on X-Rays.")
+    st.write("To state how important the recognition of lung deseases is, we provide a chart showing the number of deaths caused by pneumonia in Germany per year:")
     
     #Chart
-    st.image("pneumonia_chart.PNG", caption="Deaths caused by Pneumonia in Germany between 1998 and 2019; Source: Federal Statistical Office of Germany", width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    st.image("pneumonia_chart.PNG", caption="Deaths caused by pneumonia in Germany between 1998 and 2019; Source: Federal Statistical Office of Germany", width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     
      
 #main - switching between parts
