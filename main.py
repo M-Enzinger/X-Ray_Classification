@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import json
 #test_max
-
+#test jan
 #test-ilaydi<3
 def first_part():
      #First part - introduction and question - visible
@@ -82,4 +82,4 @@ def second_part():
 first_part()
 
 
-#st.balloons()
+st.balloons()
