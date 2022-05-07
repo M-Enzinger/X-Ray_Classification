@@ -82,4 +82,4 @@ def second_part():
 first_part()
 
 
-#st.balloons()
+st.balloons()
