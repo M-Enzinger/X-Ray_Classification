@@ -15,8 +15,25 @@ https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0256630
 ## Comparison of different CNNs and Transformers
 https://paperswithcode.com/sota/image-classification-on-imagenet
 - Search engine: Papers With Code
-- Search term: Benchmark Image Classifiaction
-- Notes: On the bases of ImageNet CoCa (Finetuned) is the best state of the art Model. 
+- Search term: Benchmark Image Classification
+- Notes: On the bases of ImageNet, CoCa (Finetuned) is the best state of the art Model. 
+
+## Tensorflow 
+https://towardsdatascience.com/x-ray-image-classification-and-model-evaluation-7810044c0ff5
+- Search Engine: Google
+- Search term: Chest X-Ray Classification
+- Notes: Tensorflow is a framework especially designed for machine learning. In this work Tensorflow was used in combination with the library Keras in order to train a model which can distinguish whether a patient has pneumonia or not.
+
+https://www.tensorflow.org/tutorials/images/classification
+- Search Engine: Google
+- Search term: Python Image Classification
+- Notes: An example of how to train a model to do image classification using Tensorflow.
+
+https://www.tensorflow.org/api_docs/python/tf#tensorflow_2
+- Search Engine: Google
+- Search term: Tensorflow Python
+- Notes: This is the API of the Tensorflow framework, containing modules, classes and functions of the framework.
+
 
 ## Other Image classification projects
 https://ieeexplore.ieee.org/abstract/document/7930302
