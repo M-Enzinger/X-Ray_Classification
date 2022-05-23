@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import sklearn as sk
-from sklearn import semi_supervised
 from PIL import Image
 import glob
 import matplotlib.pyplot as plt
@@ -33,6 +31,8 @@ result_pneumonia = st.button("Click here to see the x-ray image of a chest with 
 if result_pneumonia:
     st.image('chest-pneumoia.jpeg', caption="this is what a chest with pneumonia looks like", width=None,
              channels="RGB", output_format="auto")
+
+st.balloons
 
 # Jan
 labels = ['NORMAL', 'PNEUMONIA']
