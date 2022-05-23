@@ -16,7 +16,7 @@ from sklearn.metrics import classification_report,confusion_matrix
 
 import tensorflow as tf
 
-import cv2
+#import cv2
 import os
 
 st.title('Team Chest X-Ray Classification')
