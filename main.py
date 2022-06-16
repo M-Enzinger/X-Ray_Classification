@@ -103,5 +103,33 @@ with st.expander("Chest X-Ray Classification Team - A Brief Introduction"):
 
     st.balloons()
 
-with st.expander("Chapter 1: Business understanding and Data Preperation"):
-    st.write('test')
+with st.expander("Chapter 1: Business Understanding"):
+    st.write(" ")
+    #Ilayda hier gerne informationen über lunkenkrankheiten einfügen was du so findest, paar infos, paar grafiken, paar hinweise wie man es an x-rays erkennt
+with st.expander("Chapter 2: Data Preparation"):
+    st.title("Chapter 2: Data Preparation")
+    st.write("At first we reviewed our Data set and checked the relative balances between test, training and validation data. The given data set contained:")
+    st.info("training set: 5,216 files [89%] belonging to two classes, 1,341 to 'NORMAL' [26%] and 3,875 to 'PNEUMONIA' [74%]")
+    st.info("test set: 624 files [11%] belonging to two classes, 234 to 'NORMAL' [36%] and 390 to 'PNEUMONIA' [64%]")
+    st.info("validation set: 16 [<1%] files belonging to two classes, 8 to 'NORMAL' [50%] and 8 to 'PNEUMONIA' [50%]")
+    st.wirte("As you can see we a some unbalances we have to deal with: First of all we moved around 5% of the training data to the test data. Because of the fact that we have a relatively small dataset in sum, we considered a 84%/16% ratio as appropriate.")
+    st.write("Additionally we created some augmented picture of the class 'NORMAL' in the training set to get a 40%/60% ratio of both classes. We used vertical flip and up to 20% zoom range for the augmentation (we defined the output size as 1200x1200 even if we use a smaller one later, but downsizing is always easier than upsizing. Of course we will use augmentation in the model as well, but we would not solve the problem of a dominant class this way.")
+    st.write("We didn´t touched the validation data set yet.")
+    st.write("At the end, our data set looked like this:")
+    st.success("training set: 6154 files [84%] belonging to two classes, 2400 to 'NORMAL' [39%] and 3,754 to 'PNEUMONIA' [61%]")
+    st.success("test set: 1158 files [16%] belonging to two classes, 486 to 'NORMAL' [42%] and 672 to 'PNEUMONIA' [58%]")
+    st.success("validation set: 16 [<1%] files belonging to two classes, 8 to 'NORMAL' [50%] and 8 to 'PNEUMONIA' [50%]")
+    st.write("We sued the following code:")
+    st.image("chapter2_code1.PNG",
+             caption="Data Generator Code",
+             width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+with st.expander("Chapter 3: First CN-Network"):
+    st.write(" ")
+with st.expander("Chapter 4: Validation, Visualisation And Bias Verification"):
+    st.write(" ")
+with st.expander("Chapter 5: Fine Tuning"):
+    st.write(" ")
+with st.expander("Chapter 6: Second CN-Network: Can A Pre-Trained Model Outperform Our Own CNN?"):
+    st.write(" ")
+with st.expander("Chapter 7: Interactive Online Test of both CNNs"):
+    st.write(" ")
