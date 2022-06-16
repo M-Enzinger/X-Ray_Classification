@@ -123,14 +123,47 @@ with st.expander("Chapter 2: Data Preparation"):
     st.image("chapter2_code1.PNG",
              caption="Data Generator Code",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-    st.write("We also recognized some potential bias sources, like the sensors on many PNEUMONIA pictures. But we decided to check on potential biases later by visualizing a trained model.")
+    st.write("We also recognized some potential bias sources, like the sensors on many PNEUMONIA pictures. But we decided to check on potential biases later by visualizing a trained model and finding potential solutions, if needed, later.")
 with st.expander("Chapter 3: First CN-Network"):
-    st.write(" ")
+    st.title("Chapter 3: First CN-Network")
+    st.subheader("CNN Architecture")
+    st.write("As out third step we build our first CNN. On the following pictures you can study the code and settings we used at the end, after testing and validating dozens of variations (regarding amount of layers, augmentation settings, filter sizes, padding, pooling size, batch sizes and much more).")
+    st.write("PICTURE OF OUR FINAL OWN CNN, the architecture, summary, compile and fit part")
+    st.write("Summary of the key values:")
+    st.info("Total Params:")
+    st.info("Amount of convolutional layers:")
+    st.info("Amount of layers and neurons of the fully connected network:")
+    st.info("Filter size:")
+    st.info("Padding:")
+    st.info("Batch size")
+    st.info("Img-size:")
+    st.info("Amount of Kernels: ")
+    st.info("Kernel sizes:")
+    st.info("Amount of epochs:")
+    st.info("Steps per epoch: whole dataset")
+    st.info("Optimizer:")
+    st.subheader("Data Generator And Augmentation")
+    st.write("At first we used the tensorflow Data Generator, we have had to realize that the Generator causes big performance losses")
+    st.image("chapter3_firstdatagen.PNG",
+             caption="1. Data Generator",
+             width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    st.image("chapter3_firstdatagengraf.PNG",
+             caption="1. Data Generator Graphic Card Monitor (Cuda Kernels)",
+             width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    st.write("As a better alternative we found the following way to implement data augmentation (which was very importent to us because of our relatively small amount of data).")
+    st.image("chapter3_seconddatagen.PNG",
+             caption="2. Data Augmentation",
+             width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    st.image("chapter3_seconddatagengraf.PNG",
+             caption="2. Data Augmentation Graphic Card Monitor (Cuda Kernels)",
+             width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 with st.expander("Chapter 4: Validation, Visualisation And Bias Verification"):
     st.write(" ")
-with st.expander("Chapter 5: Fine Tuning"):
+with st.expander("Chapter 5: Performance, System and CO2 Emission"):
     st.write(" ")
-with st.expander("Chapter 6: Second CN-Network: Can A Pre-Trained Model Outperform Our Own CNN?"):
+with st.expander("Chapter 6: Fine Tuning"):
     st.write(" ")
-with st.expander("Chapter 7: Interactive Online Test of both CNNs"):
+with st.expander("Chapter 7: Second CN-Network: Can A Pre-Trained Model Outperform Our Own CNN?"):
+    st.write(" ")
+with st.expander("Chapter 8: Interactive Online Test of both CNNs"):
     st.write(" ")
