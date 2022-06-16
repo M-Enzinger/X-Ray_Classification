@@ -119,10 +119,11 @@ with st.expander("Chapter 2: Data Preparation"):
     st.success("training set: 6154 files [84%] belonging to two classes, 2400 to 'NORMAL' [39%] and 3,754 to 'PNEUMONIA' [61%]")
     st.success("test set: 1158 files [16%] belonging to two classes, 486 to 'NORMAL' [42%] and 672 to 'PNEUMONIA' [58%]")
     st.success("validation set: 16 [<1%] files belonging to two classes, 8 to 'NORMAL' [50%] and 8 to 'PNEUMONIA' [50%]")
-    st.write("We sued the following code:")
+    st.write("We used the following code:")
     st.image("chapter2_code1.PNG",
              caption="Data Generator Code",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    st.write("We also recognized some potential bias sources, like the sensors on many PNEUMONIA pictures. But we decided to check on potential biases later by visualizing a trained model.")
 with st.expander("Chapter 3: First CN-Network"):
     st.write(" ")
 with st.expander("Chapter 4: Validation, Visualisation And Bias Verification"):
