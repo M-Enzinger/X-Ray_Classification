@@ -123,9 +123,9 @@ with st.expander("Chapter 2: Data Preparation"):
     st.image("chapter2_code1.PNG",
              caption="Data Generator Code",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-    st.write("We also recognized some potential bias sources, like the sensors on many PNEUMONIA pictures. But we decided to check on potential biases later by visualizing a trained model and finding potential solutions, if needed, later.")
-with st.expander("Chapter 3: First CN-Network"):
-    st.title("Chapter 3: First CN-Network")
+    st.write("We also recognized some potential bias sources, like the sensors on many PNEUMONIA pictures. But we decided to check on potential biases later by visualizing a trained model and finding potential solutions, if needed, later. To deal with the different picture sizes, we standardize them in Chapter 3 under 'Data Generator And Augmentation' ")
+with st.expander("Chapter 3: First CN-Network Including Augmentation"):
+    st.title("Chapter 3: First CN-Network Including Augmentation")
     st.subheader("CNN Architecture")
     st.write("As out third step we build our first CNN. On the following pictures you can study the code and settings we used at the end, after testing and validating dozens of variations (regarding amount of layers, augmentation settings, filter sizes, padding, pooling size, batch sizes and much more).")
     st.write("PICTURE OF OUR FINAL OWN CNN, the architecture, summary, compile and fit part")
@@ -174,11 +174,17 @@ with st.expander("Chapter 4: Validation, Visualisation And Bias Verification"):
              caption="Accuracy, Sensitivity, Specificity implementation",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.subheader("Validation - Plotting the Metrics")
-    st.write("To get a better overview we plotted the accuracy, validation accuracy, specificity, validation specificity, sensitivity, validation sensitivity and loss as well as validation loss")
+    st.write("To get a better overview we plotted the accuracy, validation accuracy, specificity, validation specificity, sensitivity, validation sensitivity and loss as well as validation loss.")
     st.write("BILDER DER GRAPHEN!!!")
     st.write("ERKLÄRUNG WARUM DA KEIN BIAS MIT SENSOREN")
     st.subheader("Validation - Visualisation!")
+    st.write("To visualize our classification we first tried to use a function provided by the xception pre trained model, after that we created and trained a completely new pytorch model to visualize our classification but in the end we managed it to visuakize it in our original Keras model,")
     st.write("BILDER DER VISUALISIERUNG CODE ERKLÄRUNG ETC!!!")
+    st.subheader("Our Overall Performance:")
+    st.success("Validation Accuracy:")
+    st.success("Validation Sensitivity:")
+    st.success("Validation Specificity:")
+    st.success("Validation Loss:")
 
 with st.expander("Chapter 5: Performance, System and CO2 Emission"):
     st.title("Chapter 5: Performance, System and CO2 Emission")
