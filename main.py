@@ -179,7 +179,7 @@ with st.expander("Chapter 4: Validation, Visualisation And Bias Verification"):
     st.write("ERKLÄRUNG WARUM DA KEIN BIAS MIT SENSOREN")
     st.subheader("Validation - Visualisation!")
     st.write("To visualize our classification we first tried to use a function provided by the xception pre trained model, after that we created and trained a completely new pytorch model to visualize our classification but in the end we managed it to visuakize it in our original Keras model,")
-    st.write("BILDER DER VISUALISIERUNG CODE ERKLÄRUNG ETC!!!")
+    st.write("BILDER DER VISUALISIERUNG CODE ERKLÄRUNG ETC!!!!")
     st.subheader("Our Overall Performance:")
     st.success("Validation Accuracy:")
     st.success("Validation Sensitivity:")
