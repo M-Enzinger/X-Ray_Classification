@@ -158,7 +158,27 @@ with st.expander("Chapter 3: First CN-Network"):
              caption="2. Data Augmentation Graphic Card Monitor (Cuda Kernels)",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 with st.expander("Chapter 4: Validation, Visualisation And Bias Verification"):
-    st.write(" ")
+    st.subheader("Validation - Understanding The Metrics")
+    st.write("Before measuring values like the accuracy of sensitivity we have to understand them - a brief summary:")
+    st.image("chapter4_accsensspec.PNG",
+             caption="Accuracy, Sensitivity, Specificity; Source: https://lexjansen.com/nesug/nesug10/hl/hl07.pdf, Page 1",
+             width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    st.info("Sensitivity: The sensitivity shows the performance of detecting PNEUMONIA if someone does really have PNEUMONIA. In Other words: The sensitivity contribute to the rate of True Positive/ False negativ detections. In reference to the Picture above: TP/(TP + FN)")
+    st.info("Specificity: The specificity shows the performance of detecting a NORMAL lung if someone is really healthy. In Other words: The specificity contribute to the rate of false Positive/ true negativ detections. In reference to the Picture above: TN/(TN + FP)")
+    st.info("Accuracy: The accuracy shows the overall and combined performance of the model trough all classes. In reference to the Picture above:  (TN + TP)/(TN+TP+FN+FP)")
+    st.subheader("Validation - Measuring")
+    st.write("At first we only measured the Accuracy. But we recognized that the validation accuracy can be very misleading. An example: If your model has a specificity of nearly 100% and a sensitivity of 40%, the accuracy could still be around 80%, even if the model only detects 40% of all PNEUMONIA lungs as not healthy.")
+    st.write("We implemented the sensitivity and specificity the following way:")
+    st.image("chapter4_accsensspecimpl.PNG",
+             caption="Accuracy, Sensitivity, Specificity implementation, Page 1",
+             width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    st.subheader("Validation - Plotting the Metrics")
+    st.write("To get a better overview we plotted the accuracy, validation accuracy, specificity, validation specificity, sensitivity, validation sensitivity and loss as well as validation loss")
+    st.write("BILDER DER GRAPHEN!!!")
+    st.write("ERKLÄRUNG WARUM DA KEIN BIAS MIT SENSOREN")
+    st.subheader("Validation - Visualisation")
+    st.write("BILDER DER VISUALISIERUNG CODE ERKLÄRUNG ETC!!!")
+
 with st.expander("Chapter 5: Performance, System and CO2 Emission"):
     st.write(" ")
 with st.expander("Chapter 6: Fine Tuning"):
