@@ -143,7 +143,7 @@ with st.expander("Chapter 3: First CN-Network"):
     st.info("Steps per epoch: whole dataset")
     st.info("Optimizer:")
     st.subheader("Data Generator And Augmentation")
-    st.write("At first we used the tensorflow Data Generator, we have had to realize that the Generator causes big performance losses")
+    st.write("At first we used the tensorflow Data Generator, we have had to realize that the Generator causes big performance losses.")
     st.image("chapter3_firstdatagen.PNG",
              caption="1. Data Generator",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
