@@ -176,7 +176,7 @@ with st.expander("Chapter 4: Validation, Visualisation And Bias Verification"):
     st.write("To get a better overview we plotted the accuracy, validation accuracy, specificity, validation specificity, sensitivity, validation sensitivity and loss as well as validation loss")
     st.write("BILDER DER GRAPHEN!!!")
     st.write("ERKLÄRUNG WARUM DA KEIN BIAS MIT SENSOREN")
-    st.subheader("Validation - Visualisation")
+    st.subheader("Validation - Visualisation!")
     st.write("BILDER DER VISUALISIERUNG CODE ERKLÄRUNG ETC!!!")
 
 with st.expander("Chapter 5: Performance, System and CO2 Emission"):
