@@ -26,21 +26,28 @@ with st.expander("Chapter 2: Data Preparation"):
 with st.expander("Chapter 3: First CN-Network Including Augmentation"):
     st.title("Chapter 3: First CN-Network Including Augmentation")
     st.subheader("CNN Architecture")
-    st.write("As out third step we build our first CNN. On the following pictures you can study the code and settings we used at the end, after testing and validating dozens of variations (regarding amount of layers, augmentation settings, filter sizes, padding, pooling size, batch sizes and much more).")
-    st.write("PICTURE OF OUR FINAL OWN CNN, the architecture, summary, compile and fit part")
+    st.write("As out third step we build our first CNN using Tensorflow and Keras. On the following pictures you can study the code and settings we used at the end, after testing and validating dozens of variations (regarding amount of layers, augmentation settings, filter sizes, padding, pooling size, batch sizes and much more).")
+    st.image("chapter3_arch1.PNG",
+             caption="CNN Architecture",
+             width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    st.image("chapter3_arch3.PNG",
+             caption="CNN Architecture/ Summary",
+             width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    st.image("chapter3_arch2.PNG",
+             caption="CNN Architecture/ Fit-Part",
+             width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.write("Summary of the key values:")
-    st.info("Total Params:")
-    st.info("Amount of convolutional layers:")
-    st.info("Amount of layers and neurons of the fully connected network:")
-    st.info("Filter size:")
-    st.info("Padding:")
-    st.info("Batch size")
-    st.info("Img-size:")
-    st.info("Amount of Kernels: ")
-    st.info("Kernel sizes:")
-    st.info("Amount of epochs:")
+    st.info("Total Params: 92.165.473")
+    st.info("Amount of convolutional layers: 2")
+    st.info("Amount of layers and neurons of the fully connected network: 1. -> 128, 2. -> 1")
+    st.info("Filter size: 3x3")
+    st.info("Padding: Same")
+    st.info("Batch size: 32")
+    st.info("Img-size: 600x600")
+    st.info("Amount of Kernels: 16, 32")
+    st.info("Amount of epochs: until earlystopping")
     st.info("Steps per epoch: whole dataset")
-    st.info("Optimizer:")
+    st.info("Optimizer: adam")
     st.subheader("Data Generator And Augmentation")
     st.write("At first we used the tensorflow Data Generator, we have had to realize that the Generator causes big performance losses.")
     st.image("chapter3_firstdatagen.PNG",
@@ -56,8 +63,9 @@ with st.expander("Chapter 3: First CN-Network Including Augmentation"):
     st.image("chapter3_seconddatagengraf.PNG",
              caption="2. Data Augmentation Graphic Card Monitor (Cuda Kernels)",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-with st.expander("Chapter 4: Validation, Visualisation And Bias Verification"):
-    st.title("Chapter 4: Validation, Visualisation And Bias Verification")
+
+with st.expander("Chapter 4: Validation, Visualisation And Bias Verification Of Our First CNN"):
+    st.title("Chapter 4: Validation, Visualisation And Bias Verification Of Our First CNN")
     st.subheader("Validation - Understanding The Metrics")
     st.write("Before measuring values like the accuracy or sensitivity we have to understand them - a brief summary:")
     st.image("chapter4_accsensspec.PNG",
@@ -74,18 +82,40 @@ with st.expander("Chapter 4: Validation, Visualisation And Bias Verification"):
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.subheader("Validation - Plotting the Metrics")
     st.write("To get a better overview we plotted the accuracy, validation accuracy, specificity, validation specificity, sensitivity, validation sensitivity and loss as well as validation loss.")
-    st.write("BILDER DER GRAPHEN!!!")
-    st.write("ERKLÄRUNG WARUM DA KEIN BIAS MIT SENSOREN")
+    st.write("BILDER DER GRAPHEN (acc/val acc; loss/val loss; spec/val spec, sens/ val sens!!!")
     st.subheader("Validation - Visualisation!")
     st.write("To visualize our classification we first tried to use a function provided by the xception pre trained model, after that we created and trained a completely new pytorch model to visualize our classification but in the end we managed it to visuakize it in our original Keras model,")
-    st.write("BILDER DER VISUALISIERUNG CODE ERKLÄRUNG ETC!!!!")
-    st.subheader("Our Overall Performance:")
+    st.write("Here should be pictures of our visualisation, but as you can see, you can see nothing")
+    st.write("That´s because we had some struggle implementing visualisation into a Keras model, so we followed the advice to build a pre-Trained, transfer learned and fine tuned pytorch model and to visualize this one")
+    st.write("That´s why you will finde the last to cahpters (3 and 4) repeating in chapter 5 and 6, just with our new pytorch model...")
+    st.subheader("Our Overall Performance (Of The First 'Abandoned' CNN)")
     st.success("Validation Accuracy:")
     st.success("Validation Sensitivity:")
     st.success("Validation Specificity:")
     st.success("Validation Loss:")
 
-with st.expander("Chapter 5: Performance, System and CO2 Emission"):
+with st.expander("Chapter 5: Second CN-Network Including Augmentation, Transfer Learning And Fine-Tuning"):
+    st.title("Chapter 3: First CN-Network Including Augmentation")
+    st.subheader("CNN Architecture")
+    st.write("Because of reasons we already described in chapter 4, we build this second CNN with pytorch. On the following pictures you can study the code and settings we used at the end, after testing and validating dozens of variations (regarding amount of layers, augmentation settings, filter sizes, padding, pooling size, batch sizes and much more).")
+    st.write("PICTURE OF OUR FINAL pytorch CNN, the architecture, summary, compile and fit part")
+    st.write("Summary of the key values:")
+    st.info("Total Params:")
+    st.info("Amount of convolutional layers:")
+    st.info("Amount of layers and neurons of the fully connected network:")
+    st.info("Filter size:")
+    st.info("Padding:")
+    st.info("Batch size")
+    st.info("Img-size:")
+    st.info("Amount of Kernels: ")
+    st.info("Amount of epochs:")
+    st.info("Steps per epoch: whole dataset")
+    st.info("Optimizer:")
+
+with st.expander("Chapter 6: Validation, Visualisation And Bias Verification Of Second CNN"):
+    st.title("Chapter 4: Validation, Visualisation And Bias Verification Of Our Second CNN")
+
+with st.expander("Chapter 7: Performance, System and CO2 Emission"):
     st.title("Chapter 5: Performance, System and CO2 Emission")
     st.subheader("Operating System")
     st.info("CPU: AMD RYZON 7 1700x; Threads: 16; Cores: 8; CPU Clock: 3.8 mhz")
@@ -112,11 +142,7 @@ with st.expander("Chapter 5: Performance, System and CO2 Emission"):
     st.error("CO2 Emission Per training (10epochs): 420g*(32/60)*0.45 = 100,8g CO2")
     st.error("CO2 Emission Per Model Development (50-100x training 10epochs each): 5.040kg-10.080kg CO2")
     st.warning("This Amount equals a 80 to 100 km car ride")
-with st.expander("Chapter 6: Fine Tuning"):
-    st.title("Chapter 6: Fine Tuning")
-with st.expander("Chapter 7: Second CN-Network: Can A Pre-Trained Model Outperform Our Own CNN?"):
-    st.title("Chapter 7: Second CN-Network: Can A Pre-Trained Model Outperform Our Own CNN?")
 with st.expander("Chapter 8: Interactive Online Test of both CNNs"):
-    st.title("Chapter 8: Interactive Online Test of both CNNs")
+    st.title("Chapter 8: Interactive Online Test Of Our First (Keras) And Second (Pytorch) Model")
 with st.expander("Chapter 9: Conclusion"):
     st.title("Chapter 9: Conclusion")
