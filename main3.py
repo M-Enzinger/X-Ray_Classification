@@ -59,7 +59,7 @@ with st.expander("Chapter 3: First CN-Network Including Augmentation"):
 with st.expander("Chapter 4: Validation, Visualisation And Bias Verification"):
     st.title("Chapter 4: Validation, Visualisation And Bias Verification")
     st.subheader("Validation - Understanding The Metrics")
-    st.write("Before measuring values like the accuracy of sensitivity we have to understand them - a brief summary:")
+    st.write("Before measuring values like the accuracy or sensitivity we have to understand them - a brief summary:")
     st.image("chapter4_accsensspec.PNG",
              caption="Accuracy, Sensitivity, Specificity; Source: https://lexjansen.com/nesug/nesug10/hl/hl07.pdf, Page 1",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
@@ -68,7 +68,7 @@ with st.expander("Chapter 4: Validation, Visualisation And Bias Verification"):
     st.info("Accuracy: The accuracy shows the overall and combined performance of the model trough all classes. In reference to the Picture above:  (TN + TP)/(TN+TP+FN+FP)")
     st.subheader("Validation - Measuring")
     st.write("At first we only measured the Accuracy. But we recognized that the validation accuracy can be very misleading. An example: If your model has a specificity of nearly 100% and a sensitivity of 40%, the accuracy could still be around 80%, even if the model only detects 40% of all PNEUMONIA lungs as not healthy.")
-    st.write("We implemented the sensitivity and specificity the following way:")
+    st.write("We implemented the sensitivity and specificity the following way, including an automated stop with the best weights:")
     st.image("chapter4_accsensspecimpl.PNG",
              caption="Accuracy, Sensitivity, Specificity implementation",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
