@@ -45,7 +45,7 @@ with st.expander("Chapter 3: First CN-Network Including Augmentation"):
     st.info("Batch size: 32")
     st.info("Img-size: 600x600")
     st.info("Amount of Kernels: 16, 32")
-    st.info("Amount of epochs: until earlystopping")
+    st.info("Amount of epochs: 6, until earlystopping")
     st.info("Steps per epoch: whole dataset")
     st.info("Optimizer: adam")
     st.subheader("Data Generator And Augmentation")
@@ -76,44 +76,38 @@ with st.expander("Chapter 4: Validation, Visualisation And Bias Verification Of 
     st.info("Accuracy: The accuracy shows the overall and combined performance of the model trough all classes. In reference to the Picture above:  (TN + TP)/(TN+TP+FN+FP)")
     st.subheader("Validation - Measuring")
     st.write("At first we only measured the Accuracy. But we recognized that the validation accuracy can be very misleading. An example: If your model has a specificity of nearly 100% and a sensitivity of 40%, the accuracy could still be around 80%, even if the model only detects 40% of all PNEUMONIA lungs as not healthy.")
-    st.write("We implemented the sensitivity and specificity the following way, including an automated stop with the best weights:")
+    st.write("We implemented the sensitivity and specificity the following way, including an automated stop with the best weights (training until 30th epoch and recover best weights:")
     st.image("chapter4_accsensspecimpl.PNG",
              caption="Accuracy, Sensitivity, Specificity implementation",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.subheader("Validation - Plotting the Metrics")
-    st.write("To get a better overview we plotted the accuracy, validation accuracy, specificity, validation specificity, sensitivity, validation sensitivity and loss as well as validation loss.")
-    st.write("BILDER DER GRAPHEN (acc/val acc; loss/val loss; spec/val spec, sens/ val sens!!!")
+    st.write("To get a better overview we plotted the accuracy and validation accuracy as well as loss and validation loss. Especially for overfitting detection.")
+    st.image("chapter4_grafacc.PNG",
+             caption="Accuracy, Sensitivity, Specificity implementation",
+             width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    st.image("chapter4_grafloss.PNG",
+             caption="Accuracy, Sensitivity, Specificity implementation",
+             width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.subheader("Validation - Visualisation!")
     st.write("To visualize our classification we first tried to use a function provided by the xception pre trained model, after that we created and trained a completely new pytorch model to visualize our classification but in the end we managed it to visuakize it in our original Keras model,")
     st.write("Here should be pictures of our visualisation, but as you can see, you can see nothing")
     st.write("That´s because we had some struggle implementing visualisation into a Keras model, so we followed the advice to build a pre-Trained, transfer learned and fine tuned pytorch model and to visualize this one")
-    st.write("That´s why you will finde the last to cahpters (3 and 4) repeating in chapter 5 and 6, just with our new pytorch model...")
-    st.subheader("Our Overall Performance (Of The First 'Abandoned' CNN)")
-    st.success("Validation Accuracy:")
-    st.success("Validation Sensitivity:")
-    st.success("Validation Specificity:")
-    st.success("Validation Loss:")
+    st.write("That´s why you will find the last two chapters (3 and 4) repeating in chapter 5 and 6, just with our new pytorch model...")
+    st.subheader("Our Overall Performance (Of The First CNN)")
+    st.success("Validation Accuracy: 87%")
+    st.success("Validation Sensitivity: 83%")
+    st.success("Validation Specificity: 90%")
 
 with st.expander("Chapter 5: Second CN-Network Including Augmentation, Transfer Learning And Fine-Tuning"):
     st.title("Chapter 3: First CN-Network Including Augmentation")
+    st.error("In progress, added BEFORE second deadline. First model working and testable")
     st.subheader("CNN Architecture")
     st.write("Because of reasons we already described in chapter 4, we build this second CNN with pytorch. On the following pictures you can study the code and settings we used at the end, after testing and validating dozens of variations (regarding amount of layers, augmentation settings, filter sizes, padding, pooling size, batch sizes and much more).")
     st.write("PICTURE OF OUR FINAL pytorch CNN, the architecture, summary, compile and fit part")
-    st.write("Summary of the key values:")
-    st.info("Total Params:")
-    st.info("Amount of convolutional layers:")
-    st.info("Amount of layers and neurons of the fully connected network:")
-    st.info("Filter size:")
-    st.info("Padding:")
-    st.info("Batch size")
-    st.info("Img-size:")
-    st.info("Amount of Kernels: ")
-    st.info("Amount of epochs:")
-    st.info("Steps per epoch: whole dataset")
-    st.info("Optimizer:")
 
 with st.expander("Chapter 6: Validation, Visualisation And Bias Verification Of Second CNN"):
     st.title("Chapter 4: Validation, Visualisation And Bias Verification Of Our Second CNN")
+    st.error("In progress, added BEFORE second deadline. First model working and testable")
 
 with st.expander("Chapter 7: Performance, System and CO2 Emission"):
     st.title("Chapter 5: Performance, System and CO2 Emission")
@@ -144,5 +138,8 @@ with st.expander("Chapter 7: Performance, System and CO2 Emission"):
     st.warning("This Amount equals a 80 to 100 km car ride")
 with st.expander("Chapter 8: Interactive Online Test of both CNNs"):
     st.title("Chapter 8: Interactive Online Test Of Our First (Keras) And Second (Pytorch) Model")
+    st.subheader("Online Test Of Our First Model:")
+    st.subheader("Online Test Of Our Second Model:")
+    st.success("Will be added BEFORE second deadline.")
 with st.expander("Chapter 9: Conclusion"):
     st.title("Chapter 9: Conclusion")
