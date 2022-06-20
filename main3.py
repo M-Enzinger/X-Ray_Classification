@@ -83,10 +83,10 @@ with st.expander("Chapter 4: Validation, Visualisation And Bias Verification Of 
     st.subheader("Validation - Plotting the Metrics")
     st.write("To get a better overview we plotted the accuracy and validation accuracy as well as loss and validation loss. Especially for overfitting detection.")
     st.image("chapter4_grafacc.PNG",
-             caption="Accuracy, Sensitivity, Specificity implementation",
+             caption="Graph Accuracy",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.image("chapter4_grafloss.PNG",
-             caption="Accuracy, Sensitivity, Specificity implementation",
+             caption="Graph Loss",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.subheader("Validation - Visualisation!")
     st.write("To visualize our classification we first tried to use a function provided by the xception pre trained model, after that we created and trained a completely new pytorch model to visualize our classification but in the end we managed it to visuakize it in our original Keras model,")
