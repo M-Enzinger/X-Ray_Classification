@@ -93,7 +93,7 @@ with st.expander("Chapter 4: Validation, Visualisation And Bias Verification Of 
     st.write("Here should be pictures of our visualisation, but as you can see, you can see nothing")
     st.write("That´s because we had some struggle implementing visualisation into a Keras model, so we followed the advice to build a pre-Trained, transfer learned and fine tuned pytorch model and to visualize this one")
     st.write("That´s why you will find the last two chapters (3 and 4) repeating in chapter 5 and 6, just with our new pytorch model...")
-    st.subheader("Our Overall Performance (Of The First CNN)")
+    st.subheader("Our Overall Performance Of The First CNN")
     st.success("Validation Accuracy: 87%")
     st.success("Validation Sensitivity: 83%")
     st.success("Validation Specificity: 90%")
