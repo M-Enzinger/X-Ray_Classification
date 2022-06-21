@@ -88,6 +88,9 @@ with st.expander("Chapter 4: Validation, Visualisation And Bias Verification Of 
     st.image("chapter4_grafloss.PNG",
              caption="Graph Loss",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    st.image("chapter4_graf2.PNG",
+             caption="Early Stopping",
+             width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.subheader("Validation - Visualisation!")
     st.write("To visualize our classification we first tried to use a function provided by the xception pre trained model, after that we created and trained a completely new pytorch model to visualize our classification but in the end we managed it to visuakize it in our original Keras model,")
     st.write("Here should be pictures of our visualisation, but as you can see, you can see nothing")
