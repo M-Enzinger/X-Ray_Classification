@@ -3,7 +3,7 @@ import requests
 import json
 
 with st.expander("Chapter 1: Business Understanding"):
-    st.write(" ")
+    st.write("Lung disease is one of the most common forms of illness and can come in a variety of forms. Common chronic diseases are, for example, chronic obstructive pulmonary disease (COPD), or asthma. An acute lung disease, from which 15,287 people died in Germany in 2020, is pneumonia. Common symptoms besides fever are chest pain when coughing and rapid breathing. ")
     #Ilayda hier gerne informationen über lunkenkrankheiten einfügen was du so findest, paar infos, paar grafiken, paar hinweise wie man es an x-rays erkennt
 with st.expander("Chapter 2: Data Preparation"):
     st.title("Chapter 2: Data Preparation")
