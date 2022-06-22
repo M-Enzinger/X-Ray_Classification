@@ -2,10 +2,6 @@ import streamlit as st
 import requests
 import json
 
-
-# test_max
-# test jan
-# test-ilaydi
 with st.expander("Chest X-Ray Classification Team - A Brief Introduction"):
     def first_part():
         # First part - introduction and question - visible
@@ -16,7 +12,7 @@ with st.expander("Chest X-Ray Classification Team - A Brief Introduction"):
         st.write(
             "In the picture below you can see the X-Ray of a chest. Do you recognize something unusual? --> Neither do we.")
         st.write("Inspect the picture carefully, then click the Button.")
-        st.image(image="chest-pneumoia.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB",
+        st.image(image="/img/chest-pneumoia.jpeg", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB",
                  output_format="auto")
 
         # Button1 to show answer, motivation, chart
@@ -74,7 +70,7 @@ with st.expander("Chest X-Ray Classification Team - A Brief Introduction"):
     def second_part():
         # Second part - solution and motivation - firstly invisible - triggered by Button1
         # Solution what user has missed
-        st.image(image="chest-pneumoia_prepared.jpeg", caption=None, width=None, use_column_width=None, clamp=False,
+        st.image(image="/img/chest-pneumoia_prepared.jpeg", caption=None, width=None, use_column_width=None, clamp=False,
                  channels="RGB", output_format="auto")
         st.write(
             "Probably you have not detected it, but this person has a dangerous pneumonia, highlighted on the appeared "
@@ -92,7 +88,7 @@ with st.expander("Chest X-Ray Classification Team - A Brief Introduction"):
             "caused by pneumonia in Germany per year:")
 
         # Chart
-        st.image("pneumonia_chart.PNG",
+        st.image("/img/pneumonia_chart.PNG",
                  caption="Deaths caused by pneumonia in Germany between 1998 and 2019; Source: Federal Statistical Office "
                          "of Germany",
                  width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
