@@ -94,26 +94,49 @@ with st.expander("Chapter 4: Validation, Visualisation And Bias Verification Of 
     st.subheader("Validation - Visualisation!")
     st.write("To visualize our classification we first tried to use a function provided by the xception pre trained model, after that we created and trained a completely new pytorch model to visualize our classification but in the end we managed it to visuakize it in our original Keras model,")
     st.write("Here should be pictures of our visualisation, but as you can see, you can see nothing")
-    st.write("That´s because we had some struggle implementing visualisation into a Keras model, so we followed the advice to build a pre-Trained, transfer learned and fine tuned pytorch model and to visualize this one")
+    st.write("That´s because we had some struggle implementing visualisation into a Keras model, so we followed the advice to build a pytorch model and to visualize this one")
     st.write("That´s why you will find the last two chapters (3 and 4) repeating in chapter 5 and 6, just with our new pytorch model...")
     st.subheader("Our Overall Performance Of The First CNN")
     st.success("Validation Accuracy: 87%")
     st.success("Validation Sensitivity: 83%")
     st.success("Validation Specificity: 90%")
 
-with st.expander("Chapter 5: Second CN-Network Including Augmentation, Transfer Learning And Fine-Tuning"):
-    st.title("Chapter 3: First CN-Network Including Augmentation")
-    st.error("In progress, added BEFORE second deadline. First model working and testable")
+with st.expander("Chapter 5: Second CN-Network Including Augmentation"):
+    st.title("Chapter 5: Second CN-Network Including Augmentation, Transfer Learning And Fine-Tuning")
     st.subheader("CNN Architecture")
+    #jan hier bitte bilder von der architecture deines modells, also der layers filter, pooling etc.
     st.write("Because of reasons we already described in chapter 4, we build this second CNN with pytorch. On the following pictures you can study the code and settings we used at the end, after testing and validating dozens of variations (regarding amount of layers, augmentation settings, filter sizes, padding, pooling size, batch sizes and much more).")
-    st.write("PICTURE OF OUR FINAL pytorch CNN, the architecture, summary, compile and fit part")
+    st.subheader("Augmentation")
+    #Jan hier bitte bilder vom code von der augmenatation
+   
 
 with st.expander("Chapter 6: Validation, Visualisation And Bias Verification Of Second CNN"):
-    st.title("Chapter 4: Validation, Visualisation And Bias Verification Of Our Second CNN")
-    st.error("In progress, added BEFORE second deadline. First model working and testable")
+    st.title("Chapter 6: Validation, Visualisation And Bias Verification Of Second CNN")
+        st.subheader("Visualisation")
+    #Jan bitte hier noch die bilder vom code von der Visualisierung, also vom code wie das geht, nicht die visualisierten bilder, die habe ich unten schon
+    st.subheader("Resuts And Interpretation Of The Visualization")
+    st.write("GradCam results of pneumonia lung WITHOUT sensors:")
+    st.image("GradCam-Images/AUGSMOOTHperson1951_bacteria_4882.jpeg",
+             caption="Pneumonia Without Sensors",
+             width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    st.image("GradCam-Images/AUGSMOOTHperson16_virus_47.jpeg",
+             caption="Pneumonia Without Sensors",
+             width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    st.write("GradCam results of pneumonia lungs WITH sensors:")
+    st.image("GradCam-Images/AUGSMOOTHperson30_virus_69.jpeg",
+             caption="Pneumonia With Sensors",
+             width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    st.write("As you can see on the pictures above, the sensors are not highly marked and, in consequence, not effectively considered in the decision progress. At this point we excluded the sensors as a possible bias source.")
+    st.subheader("Our Overall Performance Of The Second CNN")
+    # Jan bitte exkate werte ergänzen
+    st.success("Validation Accuracy: %")
+    st.success("Validation Sensitivity: %")
+    st.success("Validation Specificity: %")
+    
+                 
 
 with st.expander("Chapter 7: Performance, System and CO2 Emission"):
-    st.title("Chapter 5: Performance, System and CO2 Emission")
+    st.title("Chapter 7: Performance, System and CO2 Emission")
     st.subheader("Operating System")
     st.info("CPU: AMD RYZON 7 1700x; Threads: 16; Cores: 8; CPU Clock: 3.8 mhz")
     st.info("GPU: GeForce GTX 1080; Cores: 2560; Memory Size: 8GB; Memory Type: GDDR5X")
