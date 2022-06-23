@@ -12,6 +12,7 @@ from torchvision import datasets, models, transforms
 import os
 import torch.nn as nn
 from PIL import Image
+import pytorch_grad_cam
 
 @st.cache
 def load_image(image_file):
