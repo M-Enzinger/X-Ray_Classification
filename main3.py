@@ -126,7 +126,7 @@ with st.expander("Chapter 6: Validation, Visualization And Bias Verification Of 
     st.title("Chapter 6: Validation, Visualization And Bias Verification Of Second CNN")
     st.subheader("Visualization")
     st.write("After a long trial and error process, we got our heatmap visualization to work properly using GradCAM. Here you will find the code we used and some example images we were able to produce and analyse.")
-    st.image("img/chapter6-gradcamCode.jpg",
+    st.image("img/chapter6-gradcamCode.png",
          caption="Our GradCAM implementation",
          width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.subheader("Resuts And Interpretation Of The Visualization")
