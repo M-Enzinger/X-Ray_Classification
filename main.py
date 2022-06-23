@@ -96,7 +96,7 @@ with st.expander("Chest X-Ray Classification Team - A Brief Introduction"):
             "caused by pneumonia in Germany per year:")
 
         # Chart
-        st.image("img/pneumonia_chart.PNG",
+        st.image("img/pneumonia_chart.png",
                  caption="Deaths caused by pneumonia in Germany between 1998 and 2019; Source: Federal Statistical Office "
                          "of Germany",
                  width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
