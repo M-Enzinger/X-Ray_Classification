@@ -59,7 +59,7 @@ if (startButton):
     }
 
     # Directory of 'train' and 'test' folders
-    data_dir = tempDir
+    data_dir = 'tempDir'
 
     # Retrieving the images by folder
     image_datasets = {x: datasets.ImageFolder(os.path.join(data_dir, x),
