@@ -20,9 +20,11 @@ if image_file is not None:
     
     with open(os.path.join("tempDir", image_file.name, "wb") as f:
               f.write(image_file.getbuffer())
+              
 col1, col2, col3, col4, col5 = st.columns(5)
         with col3:
             button1 = st.button("Predict")
+              
 
 if (startButton):
     os.environ["KMP_DUPLICATE_LIB_OK"] = "True"
@@ -49,10 +51,8 @@ if (startButton):
         ]),
     }
 
-    uploaded_file = st.file_uploader("Choose a file to predict and classify")
-
     # Directory of 'train' and 'test' folders
-    data_dir = iploaded_file
+    data_dir = tempDir
 
     # Retrieving the images by folder
     image_datasets = {x: datasets.ImageFolder(os.path.join(data_dir, x),
