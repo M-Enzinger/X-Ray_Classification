@@ -112,7 +112,7 @@ with st.expander("Chapter 5: Second CN-Network Including Augmentation"):
 
 with st.expander("Chapter 6: Validation, Visualisation And Bias Verification Of Second CNN"):
     st.title("Chapter 6: Validation, Visualisation And Bias Verification Of Second CNN")
-        st.subheader("Visualisation")
+        st.subhaeder("Visualisation")
     #Jan bitte hier noch die bilder vom code von der Visualisierung, also vom code wie das geht, nicht die visualisierten bilder, die habe ich unten schon
     st.subheader("Resuts And Interpretation Of The Visualization")
     st.write("GradCam results of pneumonia lung WITHOUT sensors:")
