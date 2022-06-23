@@ -24,7 +24,7 @@ if image_file is not None:
     st.write(file_details)
     img = load_image(image_file)
     st.image(img)
-    with open(os.path.join("tempDir",image_file.name),"wb") as f: 
+    with open(os.path.join("tempDir/test",image_file.name),"wb") as f: 
       f.write(image_file.getbuffer())         
     st.success("Saved File")
               
