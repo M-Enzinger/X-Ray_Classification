@@ -149,7 +149,7 @@ with st.expander("Chapter 7: Performance, System and CO2 Emission"):
     st.image("img/chapter5_gpu.png",
              caption="GPU And GPU Memory Usage; Most Important: Cuda Load",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-    st.image("img/chapter5_temp.ong",
+    st.image("img/chapter5_temp.png",
              caption="CPU And Mainboard Temperature; Cooling System: Water-cooling",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.success("Training Time (per 10 epochs): 32 min.")
