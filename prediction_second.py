@@ -8,7 +8,6 @@ from torchvision import transforms
 
 # Disable grad
 with torch.no_grad():
-
   # Retrieve item
   index = 333
   item = '/img/Normal-chest.jpeg'
