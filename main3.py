@@ -178,7 +178,7 @@ with st.expander("Chapter 7: Performance, System and CO2 Emission"):
     st.warning("This Amount equals a 80 to 100 km car ride")
 with st.expander("Chapter 8: Interaktive Prediction With Our PyTorch Model"):
     st.title("Chapter 8: Interaktive Prediction With Our PyTorch Model")
-        @st.cache
+    @st.cache
     def load_image(image_file):
         img = Image.open(image_file)
         return img
