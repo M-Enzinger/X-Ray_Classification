@@ -12,4 +12,4 @@ seaborn~=0.11.2
 opencv-python
 torch
 torchvision
-pytorch_grad_cam
+grad_cam
