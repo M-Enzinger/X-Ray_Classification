@@ -11,6 +11,12 @@ import torch
 from torchvision import datasets, models, transforms
 import os
 import torch.nn as nn
+from PIL import Image
+
+@st.cache
+def load_image(image_file):
+img = Image.open(image_file)
+return img
 
 image_file = st.file_uploader("Upload An Image")
 if image_file is not None:
