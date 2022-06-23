@@ -17,6 +17,7 @@ with st.expander("Chapter 1: Business Understanding"):
     st.write("In addition to checking the levels of inflammation in the blood, X-rays are an important tool for diagnosis. When the disease is present, white spots stand out in the affected areas of the lungs [2].")
     st.write("[1]: https://de.statista.com/statistik/daten/studie/1042795/umfrage/todesfaelle-aufgrund-der-haeufigsten-diagnosen-von-krankheiten-des-atmungssystems/, [2]: https://www.navigator-medizin.de/krankheiten/lungenentzuendung/behandlung-und-prognose.html?9-sieht-man-eine-lungenentz%c3%bcndung-immer-im-r%c3%b6ntgenbild.html#:~:text=Im%20Blut%20zeigen%20sich%20erh%C3%B6hte%20Entz%C3%BCndungswerte%20von%20CRP,schwarz%20erscheint.%20Neben%20typischen%20gibt%20es%20atypische%20Lungenentz%C3%BCndungen.")
 
+    
 with st.expander("Chapter 2: Data Preparation"):
     st.title("Chapter 2: Data Preparation")
     st.write("At first we reviewed our data set and checked the relative balances between test, training and validation data. The given data set contained:")
@@ -35,6 +36,8 @@ with st.expander("Chapter 2: Data Preparation"):
              caption="Data Generator Code",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.write("We also recognized some potential bias sources, like the sensors on many PNEUMONIA pictures. But we decided to check on potential biases later by visualizing a trained model and finding potential solutions, if needed, later. To deal with the different picture sizes, we standardized them in Chapter 3 under 'Data Generator And Augmentation' ")
+
+    
 with st.expander("Chapter 3: First CN-Network Including Augmentation"):
     st.title("Chapter 3: First CN-Network Including Augmentation")
     st.subheader("CNN Architecture")
@@ -76,6 +79,7 @@ with st.expander("Chapter 3: First CN-Network Including Augmentation"):
              caption="2. Data Augmentation Graphic Card Monitor (Cuda Kernels)",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
+    
 with st.expander("Chapter 4: Validation, Visualization And Bias Verification Of Our First CNN"):
     st.title("Chapter 4: Validation, Visualization And Bias Verification Of Our First CNN")
     st.subheader("Validation - Understanding The Metrics")
@@ -113,6 +117,7 @@ with st.expander("Chapter 4: Validation, Visualization And Bias Verification Of 
     st.success("Validation Sensitivity: 83%")
     st.success("Validation Specificity: 90%")
 
+    
 with st.expander("Chapter 5: Second CN-Network Including Augmentation"):
     st.title("Chapter 5: Second CN-Network Including Augmentation, Transfer Learning And Fine-Tuning")
     st.write("Because of reasons we already described in chapter 4, we build this second CNN with pytorch. On the following pictures you can study the code and settings we used at the end, after testing and validating dozens of variations (regarding amount of layers, augmentation settings, filter sizes, padding, pooling size, batch sizes and much more).")
@@ -154,8 +159,7 @@ with st.expander("Chapter 6: Validation, Visualization And Bias Verification Of 
     st.success("Validation Accuracy: 95.299%")
     st.success("Validation Sensitivity: 98.718%")
     st.success("Validation Specificity: 91.880%")
-    
-                 
+                    
 
 with st.expander("Chapter 7: Performance, System and CO2 Emission"):
     st.title("Chapter 7: Performance, System and CO2 Emission")
@@ -184,14 +188,17 @@ with st.expander("Chapter 7: Performance, System and CO2 Emission"):
     st.error("CO2 Emission Per training (10epochs): 420g*(32/60)*0.45 = 100,8g CO2")
     st.error("CO2 Emission Per Model Development (50-100x training 10epochs each): 5.040kg-10.080kg CO2")
     st.warning("This Amount equals a 80 to 100 km car ride")
+    
+    
 with st.expander("Chapter 8: Interaktive Prediction With Our PyTorch Model"):
     st.title("Chapter 8: Interaktive Prediction With Our PyTorch Model")
+    st.subtitle("Upload An Image To Classify And Click The 'Predict' Button (Below The Appearing Uploaded Picture)")
     @st.cache
     def load_image(image_file):
         img = Image.open(image_file)
         return img
 
-    image_file = st.file_uploader("Upload An Image To Classify And Click The Predict Button (Below The Appearing Uploaded Picture)")
+    image_file = st.file_uploader("Upload An Image To Classify, to classify an additional picture, just upload a new one and the one before will be replaced.")
     if image_file is not None:
         file_details = {"FileName":image_file.name,"FileType":image_file.type}
         st.write(file_details)
@@ -282,13 +289,12 @@ with st.expander("Chapter 8: Interaktive Prediction With Our PyTorch Model"):
 
         #print('True Value: ', ' '.join('%s' % class_names[predicted[j]] for j in range(number_of_predictions)))
         print('Predicted: ', ' '.join('%s' % class_names[predicted[0]] for j in range(number_of_predictions)))
-        st.write(print('Predicted: ', ' '.join('%s' % class_names[predicted[0]] for j in range(number_of_predictions))))
-        st.write(class_names[predicted[0]])
+        st.warning(class_names[predicted[0]])
 
 
         # In[ ]:
     
 with st.expander("Chapter 9: Conclusion"):
     st.title("Chapter 9: Conclusion")
-    st.write("Part of the fine tuning process, will be added before second deadline. All the others chapters will also be fullfilled before second deadline. The process description and anything in chapter 1 to 9 is not final yet, but gives a good overfiew. The working and interaktive model is under Chapter 8.")
+    st.write("Part of the fine tuning process, will be added before second deadline. All the others chapters will also be fullfilled before second deadline. The process description and anything in chapter 1 to 9 is not final yet, but gives a good overfiew. The working and interaktive model is under Chapter 8. Visual effects (like different colors if pneumonia/healthy) etc. will be added as well. We are also going to clean the code before the second deadline")
     st.write("All original code files are available in our GitHub repository: https://github.com/M-Enzinger/X-Ray_Classification.git")
