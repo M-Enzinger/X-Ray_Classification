@@ -96,9 +96,9 @@ with st.expander("Chapter 4: Validation, Visualization And Bias Verification Of 
              caption="Early Stopping",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.subheader("Validation - Visualization!")
-    st.write("To visualize our classification we first tried to use a function provided by the xception pre trained model, after that we created and trained a completely new pytorch model to visualize our classification but in the end we managed it to visuakize it in our original Keras model,")
+    st.write("To visualize our classification we first tried to use a function provided by the xception pretrained model, after that we created and trained a completely new pytorch model to visualize our classification but in the end we managed it to visualize it in our original Keras model,")
     st.write("Here should be pictures of our visualization, but as you can see, you can see nothing")
-    st.write("That´s because we had some struggle implementing visualization into a Keras model, so we followed the advice to build a pytorch model and to visualize this one")
+    st.write("That´s because we had some struggle implementing visualization into a Keras model, so we followed the advice to build a pytorch model and to visualize this one.")
     st.write("That´s why you will find the last two chapters (3 and 4) repeating in chapter 5 and 6, just with our new pytorch model...")
     st.subheader("Our Overall Performance Of The First CNN")
     st.success("Validation Accuracy: 87%")
