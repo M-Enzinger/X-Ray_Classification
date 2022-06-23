@@ -283,6 +283,7 @@ with st.expander("Chapter 8: Interaktive Prediction With Our PyTorch Model"):
         #print('True Value: ', ' '.join('%s' % class_names[predicted[j]] for j in range(number_of_predictions)))
         print('Predicted: ', ' '.join('%s' % class_names[predicted[0]] for j in range(number_of_predictions)))
         st.write(print('Predicted: ', ' '.join('%s' % class_names[predicted[0]] for j in range(number_of_predictions))))
+        st.write(class_names[predicted[0]])
 
 
         # In[ ]:
