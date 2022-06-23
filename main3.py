@@ -107,27 +107,28 @@ with st.expander("Chapter 4: Validation, Visualisation And Bias Verification Of 
 
 with st.expander("Chapter 5: Second CN-Network Including Augmentation"):
     st.title("Chapter 5: Second CN-Network Including Augmentation, Transfer Learning And Fine-Tuning")
-    st.subheader("CNN Architecture")
-    st.write("Using PyTorch, we implemented a pretrained model. This had two main advantages for us: The model had already been trained (okay, that one should have been obvious...)")
-    st.write("and we did not have to think of a mode architecture, as the models layers are already defined. Thus, we just had to define a few final parameters like the output sample size and the optimizer function (see image below) and the model was ready to be retrained using our X-Ray Images")
-    st.image("img/chapter5-ModelParameters.png",
-        caption="Here we imported the pretrained ResNet18 model.",
-        width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-    st.write("For detailed documentation about the ResNet18 model check: https://arxiv.org/pdf/1512.03385.pdf")
-    #jan hier bitte bilder von der architecture deines modells, also der layers filter, pooling etc.
     st.write("Because of reasons we already described in chapter 4, we build this second CNN with pytorch. On the following pictures you can study the code and settings we used at the end, after testing and validating dozens of variations (regarding amount of layers, augmentation settings, filter sizes, padding, pooling size, batch sizes and much more).")
+    st.subheader("CNN Architecture")
+    st.write("Using PyTorch, we implemented a pretrained model. This had two main advantages for us: The model had already been trained (okay,  that one should have been obvious...).")
+    st.write("The second advantage was that we did not have to think of a model architecture, as the models layers are already defined. Thus, we just had to define a few final parameters like the output sample size and the optimizer function (see image below) and the model was ready to be retrained using our X-Ray Images.")
+    st.image("img/chapter5-ModelParameters.png",
+        caption="Here we imported the pretrained ResNet18 model and set the according parameters. We chose 25 epochs because we observed the best results around that range. We even tried 1000 for fun, but the results were hardly better.",
+        width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    st.write("For detailed documentation about the ResNet18 model architecture check: https://arxiv.org/pdf/1512.03385.pdf")
     st.subheader("Augmentation")
     st.image("img/chapter5-DataPreparation.png",
          caption="Basic augmentation vor train dataset like cropping with a random center point or a partial horizontal turn.",
          width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.write("Data augmentation is usually only applied to the training set, as the test set is only used for validation and the augmentation would have no effect.")
-    #Jan hier bitte bilder vom code von der augmenatation
    
 
 with st.expander("Chapter 6: Validation, Visualisation And Bias Verification Of Second CNN"):
     st.title("Chapter 6: Validation, Visualisation And Bias Verification Of Second CNN")
     st.subheader("Visualisation")
-    #Jan bitte hier noch die bilder vom code von der Visualisierung, also vom code wie das geht, nicht die visualisierten bilder, die habe ich unten schon
+    st.write("After a long trial and error process, we got our heatmap visualisation to work properly using GradCAM. Here you will find the code we used and some example images we were able to produce and analyse.")
+        st.image("img/chapter6-gradcamCode.jpeg",
+             caption="Our GradCAM implementation",
+             width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.subheader("Resuts And Interpretation Of The Visualization")
     st.write("GradCam results of pneumonia lung WITHOUT sensors:")
     st.image("GradCam-Images/AUGSMOOTHperson1951_bacteria_4882.jpeg",
@@ -142,10 +143,9 @@ with st.expander("Chapter 6: Validation, Visualisation And Bias Verification Of 
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.write("As you can see on the pictures above, the sensors are not highly marked and, in consequence, not effectively considered in the decision progress. At this point we excluded the sensors as a possible bias source.")
     st.subheader("Our Overall Performance Of The Second CNN")
-    # Jan bitte exkate werte ergänzen
-    st.success("Validation Accuracy: %")
-    st.success("Validation Sensitivity: %")
-    st.success("Validation Specificity: %")
+    st.success("Validation Accuracy: 95.299%")
+    st.success("Validation Sensitivity: 98.718%")
+    st.success("Validation Specificity: 91.880%")
     
                  
 
