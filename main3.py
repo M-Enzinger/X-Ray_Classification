@@ -192,7 +192,7 @@ with st.expander("Chapter 7: Performance, System and CO2 Emission"):
     
 with st.expander("Chapter 8: Interaktive Prediction With Our PyTorch Model"):
     st.title("Chapter 8: Interaktive Prediction With Our PyTorch Model")
-    st.subhaeder("Upload An Image To Classify And Click The 'Predict' Button (Below The Appearing Uploaded Picture)")
+    st.subheader("Upload An Image To Classify And Click The 'Predict' Button (Below The Appearing Uploaded Picture)")
     @st.cache
     def load_image(image_file):
         img = Image.open(image_file)
