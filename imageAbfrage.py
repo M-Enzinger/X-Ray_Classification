@@ -15,8 +15,8 @@ from PIL import Image
 
 @st.cache
 def load_image(image_file):
-img = Image.open(image_file)
-return img
+    img = Image.open(image_file)
+    return img
 
 image_file = st.file_uploader("Upload An Image")
 if image_file is not None:
