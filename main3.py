@@ -2,6 +2,10 @@ import streamlit as st
 import requests
 import json
 
+
+#guten abend jan: In Chapter 5, 6 und 8 warten kommentare auf dich, die dir sagen was noch fehlt. Das kannst aber leider nur du, weil honestly verstehe ich dein modell nicht
+
+
 with st.expander("Chapter 1: Business Understanding"):
     st.write(" ")
     #von ilayda kopieren
@@ -162,11 +166,10 @@ with st.expander("Chapter 7: Performance, System and CO2 Emission"):
     st.error("CO2 Emission Per training (10epochs): 420g*(32/60)*0.45 = 100,8g CO2")
     st.error("CO2 Emission Per Model Development (50-100x training 10epochs each): 5.040kg-10.080kg CO2")
     st.warning("This Amount equals a 80 to 100 km car ride")
-with st.expander("Chapter 8: Interactive Online Test of both CNNs"):
-    st.title("Chapter 8: Interactive Online Test Of Our First (Keras) And Second (Pytorch) Model")
-    st.subheader("Online Test Of Our First Model:")
-    st.subheader("Online Test Of Our Second Model:")
-    st.success("Will be added BEFORE second deadline.")
+with st.expander("Chapter 8: Prediction"):
+    st.title("Chapter 8: Prediction")
+    #jan hier ein dropdown menü einbauen bei welchem man zwischen 10-20 bildern auswählen kann (also anhand der bilder namen, normales dropdown menü einfach) und bei jedem dropdown eintrag muss dann die prediction ALS BILD kommen, die du zuvor in jupiter gemacht und dann hchgeladen hast.
+    # Beipiel: Im dropdown menü kann man zwischen picture 1, picture 2 etc. auswählen, wenn man jetzt picture 2 auswählt muss zu exakt diesem bild ein bild des prediction ergebnisses kommen. Das heißt für alle bilder im dropdown menü musst du vorher (10 oder 20 bilder) die prediciton in jupiter machen. Kleiner work a round. Klar soweit?
 with st.expander("Chapter 9: Conclusion"):
     st.title("Chapter 9: Conclusion")
     st.write("Part of the fine tuning process, will be added before second deadline. All the others chapters will also be fullfilled before second deadline. The process description and anything in chapter 1 to 9 is not final yet.")
