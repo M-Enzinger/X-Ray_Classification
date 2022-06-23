@@ -108,9 +108,19 @@ with st.expander("Chapter 4: Validation, Visualisation And Bias Verification Of 
 with st.expander("Chapter 5: Second CN-Network Including Augmentation"):
     st.title("Chapter 5: Second CN-Network Including Augmentation, Transfer Learning And Fine-Tuning")
     st.subheader("CNN Architecture")
+    st.write("Using PyTorch, we implemented a pretrained model. This had two main advantages for us: The model had already been trained (as pretrained models usually are)"
+    st.write("and we did not have to think of a mode architecture, as the models layers are already defined. Thus, we just had to define a few final parameters like the output sample size and the optimizer function (see image below) and the model was ready to be retrained using our X-Ray Images")
+    st.image("img/chapter5-ModelParameters.png",
+        caption="Here we imported the pretrained ResNet18 model.",
+        width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    st.write("For detailed documentation about the ResNet18 model check: https://arxiv.org/pdf/1512.03385.pdf"
     #jan hier bitte bilder von der architecture deines modells, also der layers filter, pooling etc.
     st.write("Because of reasons we already described in chapter 4, we build this second CNN with pytorch. On the following pictures you can study the code and settings we used at the end, after testing and validating dozens of variations (regarding amount of layers, augmentation settings, filter sizes, padding, pooling size, batch sizes and much more).")
     st.subheader("Augmentation")
+    st.image("img/chapter5-DataPreparation.png",
+         caption="Basic augmentation vor train dataset like cropping with a random center point or a partial horizontal turn.",
+         width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    st.write("Data augmentation is usually only applied to the training set, as the test set is only used for validation and the augmentation would have no effect.
     #Jan hier bitte bilder vom code von der augmenatation
    
 
