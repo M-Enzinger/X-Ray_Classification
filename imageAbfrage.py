@@ -24,7 +24,7 @@ if image_file is not None:
               
 col1, col2, col3, col4, col5 = st.columns(5)
 with col3:
-    button1 = st.button("Predict")
+    startButton = st.button("Predict")
               
 
 if (startButton):
