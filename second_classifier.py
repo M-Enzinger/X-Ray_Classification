@@ -8,7 +8,7 @@ import PIL.Image as Image
 
 classes = ["Pneumonia", "Normal"]
 
-model = torch.load('/models/FULLRetrainedResNetModel.pt')
+model = torch.load("models/FULLRetrainedResNetModel.pt')
 
 mean = [0.4363, 0.4328, 0.3291]
 std = [0.2129, 0.2075, 0.2038]
