@@ -13,4 +13,3 @@ opencv-python
 torch
 torchvision
 grad_cam
-cv2
