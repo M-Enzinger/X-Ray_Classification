@@ -12,15 +12,15 @@ from torchvision import datasets, models, transforms
 import os
 import torch.nn as nn
 
-image_file = st.file_uploader("Choose a file to predict and classify")
+image_file = st.file_uploader("Upload An Image")
 if image_file is not None:
-    file_details = {"FileName":image_file.name, "FileType":image_file.type}
+    file_details = {"FileName":image_file.name,"FileType":image_file.type}
     st.write(file_details)
     img = load_image(image_file)
-    st.image(img, height=600, widht=600)
-    
-    with open(os.path.join("tempDir", image_file.name, "wb") as f:
-              f.write(image_file.getbuffer())
+    st.image(img,height=250,width=250)
+    with open(os.path.join("tempDir",image_file.name),"wb") as f: 
+      f.write(image_file.getbuffer())         
+    st.success("Saved File")
               
 col1, col2, col3, col4, col5 = st.columns(5)
         with col3:
