@@ -68,8 +68,8 @@ with st.expander("Chapter 3: First CN-Network Including Augmentation"):
              caption="2. Data Augmentation Graphic Card Monitor (Cuda Kernels)",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
-with st.expander("Chapter 4: Validation, Visualisation And Bias Verification Of Our First CNN"):
-    st.title("Chapter 4: Validation, Visualisation And Bias Verification Of Our First CNN")
+with st.expander("Chapter 4: Validation, Visualization And Bias Verification Of Our First CNN"):
+    st.title("Chapter 4: Validation, Visualization And Bias Verification Of Our First CNN")
     st.subheader("Validation - Understanding The Metrics")
     st.write("Before measuring values like the accuracy or sensitivity we have to understand them - a brief summary:")
     st.image("img/chapter4_accsensspec.png",
@@ -95,10 +95,10 @@ with st.expander("Chapter 4: Validation, Visualisation And Bias Verification Of 
     st.image("img/chapter4_graf2.png",
              caption="Early Stopping",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-    st.subheader("Validation - Visualisation!")
+    st.subheader("Validation - Visualization!")
     st.write("To visualize our classification we first tried to use a function provided by the xception pre trained model, after that we created and trained a completely new pytorch model to visualize our classification but in the end we managed it to visuakize it in our original Keras model,")
-    st.write("Here should be pictures of our visualisation, but as you can see, you can see nothing")
-    st.write("That´s because we had some struggle implementing visualisation into a Keras model, so we followed the advice to build a pytorch model and to visualize this one")
+    st.write("Here should be pictures of our visualization, but as you can see, you can see nothing")
+    st.write("That´s because we had some struggle implementing visualization into a Keras model, so we followed the advice to build a pytorch model and to visualize this one")
     st.write("That´s why you will find the last two chapters (3 and 4) repeating in chapter 5 and 6, just with our new pytorch model...")
     st.subheader("Our Overall Performance Of The First CNN")
     st.success("Validation Accuracy: 87%")
@@ -122,13 +122,13 @@ with st.expander("Chapter 5: Second CN-Network Including Augmentation"):
     st.write("Data augmentation is usually only applied to the training set, as the test set is only used for validation and the augmentation would have no effect.")
    
 
-with st.expander("Chapter 6: Validation, Visualisation And Bias Verification Of Second CNN"):
-    st.title("Chapter 6: Validation, Visualisation And Bias Verification Of Second CNN")
-    st.subheader("Visualisation")
-    st.write("After a long trial and error process, we got our heatmap visualisation to work properly using GradCAM. Here you will find the code we used and some example images we were able to produce and analyse.")
-        st.image("img/chapter6-gradcamCode.jpeg",
-             caption="Our GradCAM implementation",
-             width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+with st.expander("Chapter 6: Validation, Visualization And Bias Verification Of Second CNN"):
+    st.title("Chapter 6: Validation, Visualization And Bias Verification Of Second CNN")
+    st.subheader("Visualization")
+    st.write("After a long trial and error process, we got our heatmap visualization to work properly using GradCAM. Here you will find the code we used and some example images we were able to produce and analyse.")
+    st.image("img/chapter6-gradcamCode.jpeg",
+         caption="Our GradCAM implementation",
+         width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.subheader("Resuts And Interpretation Of The Visualization")
     st.write("GradCam results of pneumonia lung WITHOUT sensors:")
     st.image("GradCam-Images/AUGSMOOTHperson1951_bacteria_4882.jpeg",
