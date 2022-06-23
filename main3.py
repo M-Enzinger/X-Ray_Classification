@@ -120,7 +120,7 @@ with st.expander("Chapter 5: Second CN-Network Including Augmentation"):
     st.image("img/chapter5-DataPreparation.png",
          caption="Basic augmentation vor train dataset like cropping with a random center point or a partial horizontal turn.",
          width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-    st.write("Data augmentation is usually only applied to the training set, as the test set is only used for validation and the augmentation would have no effect.
+    st.write("Data augmentation is usually only applied to the training set, as the test set is only used for validation and the augmentation would have no effect.")
     #Jan hier bitte bilder vom code von der augmenatation
    
 
