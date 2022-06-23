@@ -96,6 +96,7 @@ if (startButton):
     number_of_predictions = 1
 
     with torch.no_grad():
+        model.eval()
         for data in dataloaders['test']:
             images, labels = data
 
