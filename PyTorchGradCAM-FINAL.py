@@ -352,8 +352,7 @@ model = model_ft.to(device)
 target_layers = [model.layer4[-1]]
 
 # Get any RGB image
-#image = PIL.Image.open('C:/Users/Jan/Desktop/XRAY/chest_xray/chest_xrayEqualImages/val/NORMAL/NORMAL2-IM-1430-0001.jpeg')
-image = matplotlib.image.imread('C:/Users/Jan/Desktop/XRAY/chest_xray/chest_xrayEqualImages/train/NORMAL/NORMAL2-IM-0559-0001.jpeg')
+image = matplotlib.image.imread('image_location')
 
 # Normalize RGB values to values between 0 and 1
 rgb_img = np.float32(image) / 255
