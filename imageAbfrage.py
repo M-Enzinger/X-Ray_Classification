@@ -64,12 +64,12 @@ if (startButton):
     # Retrieving the images by folder
     image_datasets = {x: datasets.ImageFolder(os.path.join(data_dir, x),
                                               data_transforms[x])
-                      for x in ['train', 'test']}
+                      for x in ['test']}
 
     dataloaders = {x: torch.utils.data.DataLoader(image_datasets[x], batch_size=4,
                                                  shuffle=True, num_workers=4)
-                  for x in ['train', 'test']}
-    class_names = image_datasets['train'].classes
+                  for x in ['test']}
+    class_names = image_datasets['test'].classes
 
 
     # In[3]:
