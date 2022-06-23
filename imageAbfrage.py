@@ -25,7 +25,9 @@ if image_file is not None:
     img = load_image(image_file)
     st.image(img)
     with open(os.path.join("tempDir/test/NORMAL/",image_file.name),"wb") as f: 
-      f.write(image_file.getbuffer())         
+      f.write(image_file.getbuffer())
+    with open(os.path.join("tempDir/test/PNEUMONIA/",image_file.name),"wb") as f: 
+      f.write(image_file.getbuffer()) 
     st.success("Saved File")
               
 col1, col2, col3, col4, col5 = st.columns(5)
