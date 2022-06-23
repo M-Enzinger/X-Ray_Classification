@@ -3,7 +3,7 @@ import torchvision
 import torch
 import torchvision.transforms as transforms
 import PIL.Image as Image
-import gradcam
+from torch import gradcam
 
 #image_path = "img/Normal-chest.jpeg"
 
