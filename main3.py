@@ -108,7 +108,7 @@ with st.expander("Chapter 4: Validation, Visualisation And Bias Verification Of 
 with st.expander("Chapter 5: Second CN-Network Including Augmentation"):
     st.title("Chapter 5: Second CN-Network Including Augmentation, Transfer Learning And Fine-Tuning")
     st.subheader("CNN Architecture")
-    st.write("Using PyTorch, we implemented a pretrained model. This had two main advantages for us: The model had already been trained (as pretrained models usually are)"
+    st.write("Using PyTorch, we implemented a pretrained model. This had two main advantages for us: The model had already been trained (as pretrained models usually are)")
     st.write("and we did not have to think of a mode architecture, as the models layers are already defined. Thus, we just had to define a few final parameters like the output sample size and the optimizer function (see image below) and the model was ready to be retrained using our X-Ray Images")
     st.image("img/chapter5-ModelParameters.png",
         caption="Here we imported the pretrained ResNet18 model.",
