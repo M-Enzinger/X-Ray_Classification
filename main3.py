@@ -281,12 +281,13 @@ with st.expander("Chapter 8: Interaktive Prediction With Our PyTorch Model"):
                 predicted = torch.argmax(pred_outputs.data, 1)
 
         #print('True Value: ', ' '.join('%s' % class_names[predicted[j]] for j in range(number_of_predictions)))
-        print('Predicted: ', ' '.join('%s' % class_names[predicted[0]]
-                                      for j in range(number_of_predictions)))
+        print('Predicted: ', ' '.join('%s' % class_names[predicted[0]] for j in range(number_of_predictions)))
+        st.write(print('Predicted: ', ' '.join('%s' % class_names[predicted[0]] for j in range(number_of_predictions))))
 
 
         # In[ ]:
     
 with st.expander("Chapter 9: Conclusion"):
     st.title("Chapter 9: Conclusion")
-    st.write("Part of the fine tuning process, will be added before second deadline. All the others chapters will also be fullfilled before second deadline. The process description and anything in chapter 1 to 9 is not final yet.")
+    st.write("Part of the fine tuning process, will be added before second deadline. All the others chapters will also be fullfilled before second deadline. The process description and anything in chapter 1 to 9 is not final yet, but gives a good overfiew. The working and interaktive model is under Chapter 8.")
+    st.write("All original code files are available in our GitHub repository: https://github.com/M-Enzinger/X-Ray_Classification.git
