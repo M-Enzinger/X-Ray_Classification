@@ -25,7 +25,7 @@ with st.expander("Chapter 2: Data Preparation"):
     st.warning("test set: 624 files [11%] belonging to two classes, 234 to 'NORMAL' [36%] and 390 to 'PNEUMONIA' [64%]")
     st.warning("validation set: 16 [<1%] files belonging to two classes, 8 to 'NORMAL' [50%] and 8 to 'PNEUMONIA' [50%]")
     st.write("As you can see we had some uneven distribution we had to deal with: First of all we moved around 5% of the training data to the test data. Because of the fact that we have a relatively small dataset in sum, we considered a 84%/16% ratio as appropriate.")
-    st.write("Additionally we created some augmented pictures of the class 'NORMAL' in the training set to get a 40%/60% ratio of both classes. We used vertical flip and up to 20% zoom range for the augmentation (we defined the output size as 1200x1200 even if we use a smaller one later, but downsizing is always easier than upsizing. Of course we will use augmentation in the model as well, but we would not solve the problem of a dominant class this way.")
+    st.write("Additionally we created some augmented pictures of the class 'NORMAL' in the training set to get a 40%/60% ratio of both classes. We used vertical flip and up to 20% zoom range for the augmentation (we defined the output size as 1200x1200 even if we use a smaller one later, but downsizing is always easier than upsizing) Of course we will use augmentation in the model as well, but we would not solve the problem of a dominant class this way.")
     st.write("We hadn´t touched the validation data set yet.")
     st.write("At the end, our data set looked like this:")
     st.success("training set: 6154 files [84%] belonging to two classes, 2400 to 'NORMAL' [39%] and 3,754 to 'PNEUMONIA' [61%]")
@@ -108,8 +108,8 @@ with st.expander("Chapter 4: Validation, Visualization And Bias Verification Of 
              caption="Early Stopping",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.subheader("Validation - Visualization!")
-    st.write("To visualize our classifications we first tried to use a function provided by the xception pretrained model, after that we created and trained a completely new pytorch model to visualize our classification but hoped that, in the end, we would manage to visualize it in our original Keras model.")
-    st.write("Here the pictures of our visualization should be, but as you can see, you can see nothing")
+    st.write("To visualize our classifications we first tried to use a function provided by the xception pretrained model, after that we created and trained a completely new pre-trained pytorch model to visualize our classification.")
+    st.write("Here should be the pictures of our visualization, but as you can see, you see nothing")
     st.write("That´s because we had some struggle implementing visualization into a Keras model, so we followed the advice to build a pytorch model and to visualize this one.")
     st.write("For that reason, you will find the last two chapters (3 and 4) repeating in chapter 5 and 6, just with our new pytorch model...")
     st.subheader("Our Overall Performance Of The First CNN")
@@ -120,7 +120,7 @@ with st.expander("Chapter 4: Validation, Visualization And Bias Verification Of 
     
 with st.expander("Chapter 5: Second CN-Network Including Augmentation"):
     st.title("Chapter 5: Second CN-Network Including Augmentation, Transfer Learning And Fine-Tuning")
-    st.write("Because of reasons we already described in chapter 4, we build this second CNN with pytorch. On the following pictures you can study the code and settings we used at the end, after testing and validating dozens of variations (regarding amount of layers, augmentation settings, filter sizes, padding, pooling size, batch sizes and much more).")
+    st.write("Because of reasons we already described in chapter 4, we build this second CNN with pytorch as a pre-trained Resnet-18 model. On the following pictures you can study the code and settings we used at the end, after testing and validating dozens of variations (regarding amount of layers, augmentation settings, filter sizes, padding, pooling size, batch sizes and much more).")
     st.subheader("CNN Architecture")
     st.write("Using PyTorch, we implemented a pretrained model. This had two main advantages for us: The model had already been trained (okay,  that one should have been obvious...).")
     st.write("The second advantage was that we did not have to think of a model architecture, as the models layers are already defined. Thus, we just had to define a few final parameters like the output sample size and the optimizer function (see image below) and the model was ready to be retrained using our X-Ray Images.")
