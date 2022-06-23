@@ -24,7 +24,7 @@ if image_file is not None:
     st.write(file_details)
     img = load_image(image_file)
     st.image(img)
-    with open(os.path.join("tempDir/test",image_file.name),"wb") as f: 
+    with open(os.path.join("tempDir/test/NORMAL/",image_file.name),"wb") as f: 
       f.write(image_file.getbuffer())         
     st.success("Saved File")
               
@@ -103,7 +103,7 @@ if (startButton):
             pred_outputs = model(images)
             predicted = torch.argmax(pred_outputs.data, 1)
 
-    print('True Value: ', ' '.join('%s' % class_names[predicted[j]] for j in range(number_of_predictions)))
+    #print('True Value: ', ' '.join('%s' % class_names[predicted[j]] for j in range(number_of_predictions)))
     print('Predicted: ', ' '.join('%s' % class_names[predicted[0]]
                                   for j in range(number_of_predictions)))
 
