@@ -23,8 +23,8 @@ if image_file is not None:
     st.success("Saved File")
               
 col1, col2, col3, col4, col5 = st.columns(5)
-        with col3:
-            button1 = st.button("Predict")
+with col3:
+    button1 = st.button("Predict")
               
 
 if (startButton):
