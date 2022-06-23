@@ -19,7 +19,7 @@ with st.expander("Chapter 2: Data Preparation"):
     st.success("test set: 1158 files [16%] belonging to two classes, 486 to 'NORMAL' [42%] and 672 to 'PNEUMONIA' [58%]")
     st.success("validation set: 16 [<1%] files belonging to two classes, 8 to 'NORMAL' [50%] and 8 to 'PNEUMONIA' [50%]")
     st.write("We used the following code:")
-    st.image("/img/chapter2_code1.PNG",
+    st.image('img/chapter2_code1.PNG',
              caption="Data Generator Code",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.write("We also recognized some potential bias sources, like the sensors on many PNEUMONIA pictures. But we decided to check on potential biases later by visualizing a trained model and finding potential solutions, if needed, later. To deal with the different picture sizes, we standardize them in Chapter 3 under 'Data Generator And Augmentation' ")
@@ -27,13 +27,13 @@ with st.expander("Chapter 3: First CN-Network Including Augmentation"):
     st.title("Chapter 3: First CN-Network Including Augmentation")
     st.subheader("CNN Architecture")
     st.write("As out third step we build our first CNN using Tensorflow and Keras. On the following pictures you can study the code and settings we used at the end, after testing and validating dozens of variations (regarding amount of layers, augmentation settings, filter sizes, padding, pooling size, batch sizes and much more).")
-    st.image("/img/chapter3_arch1.PNG",
+    st.image("img/chapter3_arch1.PNG",
              caption="CNN Architecture",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-    st.image("/img/chapter3_arch3.PNG",
+    st.image("img/chapter3_arch3.PNG",
              caption="CNN Architecture/ Summary",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-    st.image("/img/chapter3_arch2.PNG",
+    st.image("img/chapter3_arch2.PNG",
              caption="CNN Architecture/ Fit-Part",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.write("Summary of the key values:")
@@ -50,17 +50,17 @@ with st.expander("Chapter 3: First CN-Network Including Augmentation"):
     st.info("Optimizer: adam")
     st.subheader("Data Generator And Augmentation")
     st.write("At first we used the tensorflow Data Generator, we have had to realize that the Generator causes big performance losses.")
-    st.image("/img/chapter3_firstdatagen.PNG",
+    st.image("img/chapter3_firstdatagen.PNG",
              caption="1. Data Generator",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-    st.image("/img/chapter3_firstdatagengraf.PNG",
+    st.image("img/chapter3_firstdatagengraf.PNG",
              caption="1. Data Generator Graphic Card Monitor (Cuda Kernels)",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.write("As a better alternative we found the following way to implement data augmentation (which was very importent to us because of our relatively small amount of data).")
-    st.image("/img/chapter3_seconddatagen.PNG",
+    st.image("img/chapter3_seconddatagen.PNG",
              caption="2. Data Augmentation",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-    st.image("/img/chapter3_seconddatagengraf.PNG",
+    st.image("img/chapter3_seconddatagengraf.PNG",
              caption="2. Data Augmentation Graphic Card Monitor (Cuda Kernels)",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
@@ -68,7 +68,7 @@ with st.expander("Chapter 4: Validation, Visualisation And Bias Verification Of 
     st.title("Chapter 4: Validation, Visualisation And Bias Verification Of Our First CNN")
     st.subheader("Validation - Understanding The Metrics")
     st.write("Before measuring values like the accuracy or sensitivity we have to understand them - a brief summary:")
-    st.image("/img/chapter4_accsensspec.PNG",
+    st.image("img/chapter4_accsensspec.PNG",
              caption="Accuracy, Sensitivity, Specificity; Source: https://lexjansen.com/nesug/nesug10/hl/hl07.pdf, Page 1",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.info("Sensitivity: The sensitivity shows the performance of detecting PNEUMONIA if someone does really have PNEUMONIA. In Other words: The sensitivity contribute to the rate of True Positive/ False negativ detections. In reference to the Picture above: TP/(TP + FN)")
@@ -77,18 +77,18 @@ with st.expander("Chapter 4: Validation, Visualisation And Bias Verification Of 
     st.subheader("Validation - Measuring")
     st.write("At first we only measured the Accuracy. But we recognized that the validation accuracy can be very misleading. An example: If your model has a specificity of nearly 100% and a sensitivity of 40%, the accuracy could still be around 80%, even if the model only detects 40% of all PNEUMONIA lungs as not healthy.")
     st.write("We implemented the sensitivity and specificity the following way, including an automated stop with the best weights (training until 30th epoch and recover best weights:")
-    st.image("/img/chapter4_accsensspecimpl.PNG",
+    st.image("img/chapter4_accsensspecimpl.PNG",
              caption="Accuracy, Sensitivity, Specificity implementation",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.subheader("Validation - Plotting the Metrics")
     st.write("To get a better overview we plotted the accuracy and validation accuracy as well as loss and validation loss. Especially for overfitting detection.")
-    st.image("/img/chapter4_grafacc.PNG",
+    st.image("img/chapter4_grafacc.PNG",
              caption="Graph Accuracy",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-    st.image("/img/chapter4_grafloss.PNG",
+    st.image("img/chapter4_grafloss.PNG",
              caption="Graph Loss",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-    st.image("/img/chapter4_graf2.PNG",
+    st.image("img/chapter4_graf2.PNG",
              caption="Early Stopping",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.subheader("Validation - Visualisation!")
@@ -143,13 +143,13 @@ with st.expander("Chapter 7: Performance, System and CO2 Emission"):
     st.info("RAM: 15GB; DDR4")
     st.subheader("Performance and Resources Monitoring")
     st.write("All Screenshots were captured while training our latest model")
-    st.image("/img/chapter5_ram.PNG",
+    st.image("img/chapter5_ram.PNG",
              caption="RAM Usage",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-    st.image("/img/chapter5_gpu.PNG",
+    st.image("img/chapter5_gpu.PNG",
              caption="GPU And GPU Memory Usage; Most Important: Cuda Load",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-    st.image("/img/chapter5_temp.PNG",
+    st.image("img/chapter5_temp.PNG",
              caption="CPU And Mainboard Temperature; Cooling System: Water-cooling",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.success("Training Time (per 10 epochs): 32 min.")
