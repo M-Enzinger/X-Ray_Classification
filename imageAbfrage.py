@@ -83,7 +83,7 @@ if (startButton):
     # Here the size of each output sample is set to 2.
     model.fc = nn.Linear(num_ftrs, 2)
 
-    model.load_state_dict(torch.load("models/FULLRetrainedResNetModel.pt"))
+    model.load_state_dict(torch.load("models/FULLRetrainedResNetModel.pt", map_location=torch.device('cpu')))
 
     model = model.to(device)
 
