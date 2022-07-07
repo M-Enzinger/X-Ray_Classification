@@ -283,8 +283,8 @@ with st.expander("Chapter 7: Performance, System and CO2 Emission"):
     st.warning("Energy Consumption: < 450W")
     st.write("Taking into account the time for training and the german energy mix...")
     st.error("CO2 Emission Per kWh (german energy mix): 420g CO2")
-    st.error("CO2 Emission Per training (10epochs): 420g*(32/60)*0.45 = 100,8g CO2")
-    st.error("CO2 Emission Per Model Development (50-100x training 10epochs each): 5.040kg-10.080kg CO2")
+    st.error("CO2 Emission Per training (10epochs): 420g*(32/60)*0.45 = 100.8g CO2")
+    st.error("CO2 Emission Per Model Development (50-100x training 10epochs each): 5,040kg-10,080kg CO2")
     st.warning("This amount equals a 80 to 100 km car ride")
     
     
@@ -389,13 +389,11 @@ with st.expander("Chapter 8: Interactive Prediction with our PyTorch Model"):
         print('Predicted: ', ' '.join('%s' % class_names[predicted[0]] for j in range(number_of_predictions)))
         st.warning(class_names[predicted[0]])
 
-        st.write("Visualization of the classified picture will be added before second deadline.")
-
         # In[ ]:
     
 with st.expander("Chapter 9: Conclusion"):
     st.title("Chapter 9: Conclusion")
-    st.write("Part of the fine tuning process, will be added before second deadline. All the others chapters will also be fullfilled before second deadline. The process description and anything in chapter 1 to 9 is not final yet, but gives a good overview. The working and interactive model is under Chapter 8. Visual effects (like different colors if pneumonia/healthy) etc. will be added as well. We are also going to clean the code before the second deadline")
+    st.write("Machine Learning, Data Prediction and Classification will play an ever bigger role in the future. ")
     st.write("All original code files are available in our GitHub repository: https://github.com/M-Enzinger/X-Ray_Classification.git")
     
 
