@@ -284,7 +284,7 @@ with st.expander("Chapter 7: Performance, System and CO2 Emission"):
     st.write("Taking into account the time for training and the german energy mix...")
     st.error("CO2 Emission Per kWh (german energy mix): 420g CO2")
     st.error("CO2 Emission Per training (10epochs): 420g*(32/60)*0.45 = 100.8g CO2")
-    st.error("CO2 Emission Per Model Development (50-100x training 10epochs each): 5,040kg-10,080kg CO2")
+    st.error("CO2 Emission Per Model Development (50-100x training 10epochs each): 5.040kg-10.080kg CO2")
     st.warning("This amount equals a 80 to 100 km car ride")
     
     
