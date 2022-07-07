@@ -390,12 +390,7 @@ with st.expander("Chapter 8: Interactive Prediction with our PyTorch Model"):
         st.warning(class_names[predicted[0]])
 
         # In[ ]:
-    
-with st.expander("Chapter 9: Conclusion"):
-    st.title("Chapter 9: Conclusion")
-    st.write("Machine Learning, Data Prediction and Classification will play an ever bigger role in the future. ")
-    st.write("All original code files are available in our GitHub repository: https://github.com/M-Enzinger/X-Ray_Classification.git")
-    
+   
 
 
 
