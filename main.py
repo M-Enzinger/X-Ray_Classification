@@ -136,7 +136,7 @@ with st.expander("Chapter 2: Data Preparation"):
     st.write("We also recognized some potential bias sources, like the sensors on many PNEUMONIA pictures. But we decided to check on potential biases later by visualizing a trained model and finding potential solutions, if needed, later. To deal with the different picture sizes, we standardized them in Chapter 3 under 'Data Generator And Augmentation' ")
 
     
-with st.expander("Chapter 3: First CN-Network Including Augmentation"):
+with st.expander("Chapter 3: First CN-Network including Augmentation"):
     st.title("Chapter 3: First CN-Network Including Augmentation")
     st.subheader("CNN Architecture")
     st.write("As our third step we built our first CNN using Tensorflow and Keras. On the following pictures you can study the code and settings we used at the end, after testing and validating dozens of variations (regarding amount of layers, augmentation settings, filter sizes, padding, pooling size, batch sizes and much more).")
@@ -178,16 +178,16 @@ with st.expander("Chapter 3: First CN-Network Including Augmentation"):
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
     
-with st.expander("Chapter 4: Validation, Visualization And Bias Verification Of Our First CNN"):
-    st.title("Chapter 4: Validation, Visualization And Bias Verification Of Our First CNN")
-    st.subheader("Validation - Understanding The Metrics")
+with st.expander("Chapter 4: Validation, Visualization and Bias Verification of our first CNN"):
+    st.title("Chapter 4: Validation, Visualization and Bias Verification of our first CNN")
+    st.subheader("Validation - Understanding the metrics")
     st.write("Before measuring values like the accuracy or sensitivity we have to understand them - a brief summary:")
     st.image("img/chapter4_accsensspec.png",
              caption="Accuracy, Sensitivity, Specificity; Source: https://lexjansen.com/nesug/nesug10/hl/hl07.pdf, Page 1",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-    st.info("Sensitivity: The sensitivity shows the performance of detecting PNEUMONIA if someone does really have PNEUMONIA. In Other words: The sensitivity contribute to the rate of True Positive/ False negativ detections. In reference to the Picture above: TP/(TP + FN)")
-    st.info("Specificity: The specificity shows the performance of detecting a NORMAL lung if someone is really healthy. In Other words: The specificity contribute to the rate of false Positive/ true negativ detections. In reference to the Picture above: TN/(TN + FP)")
-    st.info("Accuracy: The accuracy shows the overall and combined performance of the model trough all classes. In reference to the Picture above:  (TN + TP)/(TN+TP+FN+FP)")
+    st.info("Sensitivity: The sensitivity shows the performance of detecting PNEUMONIA if someone does really have PNEUMONIA. In other words: The sensitivity contributes to the rate of True Positive/ False negativ detections. In reference to the Picture above: TP/(TP + FN)")
+    st.info("Specificity: The specificity shows the performance of detecting a NORMAL lung if someone is really healthy. In other words: The specificity contributes to the rate of false Positive/ true negativ detections. In reference to the Picture above: TN/(TN + FP)")
+    st.info("Accuracy: The accuracy shows the overall and combined performance of the model through all classes. In reference to the picture above:  (TN + TP)/(TN+TP+FN+FP)")
     st.subheader("Validation - Measuring")
     st.write("At first we only measured the accuracy. But we eventually found out that the validation accuracy can be very misleading. An example: If your model has a specificity of nearly 100% and a sensitivity of 40%, the accuracy could still be around 80%, even if the model only detects 40% of all PNEUMONIA lungs as not healthy.")
     st.write("We implemented the sensitivity and specificity the following way, including an automated stop with the best weights (training until 30th epoch and recover best weights:")
@@ -210,31 +210,31 @@ with st.expander("Chapter 4: Validation, Visualization And Bias Verification Of 
     st.write("Here should be the pictures of our visualization, but as you can see, you see nothing")
     st.write("That´s because we had some struggle implementing visualization into a Keras model, so we followed the advice to build a pytorch model and to visualize this one.")
     st.write("For that reason, you will find the last two chapters (3 and 4) repeating in chapter 5 and 6, just with our new pytorch model...")
-    st.subheader("Our Overall Performance Of The First CNN")
+    st.subheader("Our overall performance of the first CNN")
     st.success("Validation Accuracy: 87%")
     st.success("Validation Sensitivity: 83%")
     st.success("Validation Specificity: 90%")
 
     
-with st.expander("Chapter 5: Second CN-Network Including Augmentation"):
-    st.title("Chapter 5: Second CN-Network Including Augmentation, Transfer Learning And Fine-Tuning")
+with st.expander("Chapter 5: Second CN-Network including Augmentation"):
+    st.title("Chapter 5: Second CN-Network including Augmentation, Transfer Learning and Fine-Tuning")
     st.write("Because of reasons we already described in chapter 4, we build this second CNN with pytorch as a pre-trained Resnet-18 model. On the following pictures you can study the code and settings we used at the end, after testing and validating dozens of variations (regarding amount of layers, augmentation settings, filter sizes, padding, pooling size, batch sizes and much more).")
     st.subheader("CNN Architecture")
     st.write("Using PyTorch, we implemented a pretrained model. This had two main advantages for us: The model had already been trained (okay,  that one should have been obvious...).")
-    st.write("The second advantage was that we did not have to think of a model architecture, as the models layers are already defined. Thus, we just had to define a few final parameters like the output sample size and the optimizer function (see image below) and the model was ready to be retrained using our X-Ray Images.")
+    st.write("The second advantage was that we did not have to think of a model architecture, as the models layers are already defined. Thus, we only had to define a few final parameters like the output sample size and the optimizer function (see image below) and the model was ready to be retrained using our X-Ray Images.")
     st.image("img/chapter5-ModelParameters.png",
         caption="Here we imported the pretrained ResNet18 model and set the according parameters. We chose 25 epochs because we observed the best results around that range. We even tried 1000 for fun, but the results were hardly better.",
         width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.write("For detailed documentation about the ResNet18 model architecture check: https://arxiv.org/pdf/1512.03385.pdf")
     st.subheader("Augmentation")
     st.image("img/chapter5-DataPreparation.png",
-         caption="Basic augmentation vor train dataset like cropping with a random center point or a partial horizontal turn.",
+         caption="Basic augmentation for train dataset like cropping with a random center point or a partial horizontal turn.",
          width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.write("Data augmentation is usually only applied to the training set, as the test set is only used for validation and the augmentation would have no effect.")
    
 
-with st.expander("Chapter 6: Validation, Visualization And Bias Verification Of Second CNN"):
-    st.title("Chapter 6: Validation, Visualization And Bias Verification Of Second CNN")
+with st.expander("Chapter 6: Validation, Visualization and Bias Verification of second CNN"):
+    st.title("Chapter 6: Validation, Visualization and Bias Verification of second CNN")
     st.subheader("Visualization")
     st.write("After a long trial and error process, we got our heatmap visualization to work properly using GradCAM. Here you will find the code we used and some example images we were able to produce and analyse.")
     st.image("img/chapter6-gradcamCode.png",
@@ -252,8 +252,8 @@ with st.expander("Chapter 6: Validation, Visualization And Bias Verification Of 
     st.image("GradCam-Images/AUGSMOOTHperson30_virus_69.jpeg",
              caption="Pneumonia With Sensors",
              width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-    st.write("As you can see on the pictures above, the sensors are not highly marked and, in consequence, not effectively considered in the decision progress. At this point we excluded the sensors as a possible bias source.")
-    st.subheader("Our Overall Performance Of The Second CNN")
+    st.write("As you can see in the pictures above, the sensors are not highly marked and, in consequence, not effectively considered in the decision progress. At this point we excluded the sensors as a possible bias source.")
+    st.subheader("Our overall performance of the second CNN")
     st.success("Validation Accuracy: 95.299%")
     st.success("Validation Sensitivity: 98.718%")
     st.success("Validation Specificity: 91.880%")
@@ -285,11 +285,11 @@ with st.expander("Chapter 7: Performance, System and CO2 Emission"):
     st.error("CO2 Emission Per kWh (german energy mix): 420g CO2")
     st.error("CO2 Emission Per training (10epochs): 420g*(32/60)*0.45 = 100,8g CO2")
     st.error("CO2 Emission Per Model Development (50-100x training 10epochs each): 5.040kg-10.080kg CO2")
-    st.warning("This Amount equals a 80 to 100 km car ride")
+    st.warning("This amount equals a 80 to 100 km car ride")
     
     
-with st.expander("Chapter 8: Interaktive Prediction With Our PyTorch Model"):
-    st.title("Chapter 8: Interaktive Prediction With Our PyTorch Model")
+with st.expander("Chapter 8: Interactive Prediction with our PyTorch Model"):
+    st.title("Chapter 8: Interactive Prediction with our PyTorch Model")
     st.subheader("Upload An Image To Classify And Click The 'Predict' Button (Below The Appearing Uploaded Picture)")
     @st.cache
     def load_image(image_file):
@@ -395,7 +395,7 @@ with st.expander("Chapter 8: Interaktive Prediction With Our PyTorch Model"):
     
 with st.expander("Chapter 9: Conclusion"):
     st.title("Chapter 9: Conclusion")
-    st.write("Part of the fine tuning process, will be added before second deadline. All the others chapters will also be fullfilled before second deadline. The process description and anything in chapter 1 to 9 is not final yet, but gives a good overfiew. The working and interaktive model is under Chapter 8. Visual effects (like different colors if pneumonia/healthy) etc. will be added as well. We are also going to clean the code before the second deadline")
+    st.write("Part of the fine tuning process, will be added before second deadline. All the others chapters will also be fullfilled before second deadline. The process description and anything in chapter 1 to 9 is not final yet, but gives a good overview. The working and interactive model is under Chapter 8. Visual effects (like different colors if pneumonia/healthy) etc. will be added as well. We are also going to clean the code before the second deadline")
     st.write("All original code files are available in our GitHub repository: https://github.com/M-Enzinger/X-Ray_Classification.git")
     
 
